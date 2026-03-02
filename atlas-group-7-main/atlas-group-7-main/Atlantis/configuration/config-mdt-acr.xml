@@ -1,0 +1,1343 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE AtlantisConfiguration [
+
+<!ELEMENT AtlantisConfiguration (Initialization, Parameters,ParameterDifferences*, WindowCorners*)>
+
+<!ELEMENT Initialization (Interactions, Canvas)>
+
+<!ELEMENT Interactions (Panel*, InteractionControl+)>
+
+<!ELEMENT InteractionControl (Panel*)>
+    <!ATTLIST InteractionControl
+        projectionName    CDATA #REQUIRED
+        availableInDemoMode     CDATA "YES"
+        defaultInDemoMode CDATA "NO" >
+
+<!ELEMENT Panel EMPTY>
+    <!ATTLIST Panel
+        screenName CDATA #REQUIRED
+        fileName   CDATA #REQUIRED
+        toolTip    CDATA "">
+
+<!ELEMENT Canvas (UsedWindow+, Layout+)>
+    <!ATTLIST Canvas
+        startupLayout CDATA #REQUIRED
+        aspectRatio   CDATA #REQUIRED>
+
+<!ELEMENT UsedWindow EMPTY>
+    <!ATTLIST UsedWindow
+        name       CDATA #REQUIRED
+        projection CDATA "EP"
+        group      CDATA "Data">
+
+<!ELEMENT Layout (Window+, Page+)>
+    <!ATTLIST Layout
+        name          CDATA #REQUIRED
+        startup       CDATA #REQUIRED
+        startupWindow CDATA #REQUIRED>
+
+<!ELEMENT Window EMPTY>
+    <!ATTLIST Window
+        name   CDATA #REQUIRED
+        hPos   CDATA #REQUIRED
+        vPos   CDATA #REQUIRED
+        width  CDATA #REQUIRED
+        height CDATA #REQUIRED>
+
+<!ELEMENT Page EMPTY>
+    <!ATTLIST Page
+        name    CDATA #REQUIRED
+        content CDATA #REQUIRED>
+
+<!ELEMENT Parameters (SuperGroup*)>
+    <!ATTLIST Parameters
+        userLevel CDATA #REQUIRED>
+
+<!ELEMENT SuperGroup (Group*)>
+    <!ATTLIST SuperGroup
+        name    CDATA #REQUIRED
+        toolTip CDATA ""
+        userLevel CDATA "0">
+
+<!ELEMENT Group (Command*,((ENUM)*, (SENUM)*, (ICUT)*, (SICUT)*, (FCUT)*, (SFCUT)*, (INT)*, (SINT)*,(LINT)*, (SLINT)*, (FLOAT)*, (SFLOAT)*, (COLOR)*, (SCOLOR)*, (StatusRoot)*, (STATUS)*, (LINK)*)* )>
+    <!ATTLIST Group
+        name      CDATA #REQUIRED
+        sname     CDATA ""
+        guiUsage  (NO_USE|TABLE|PROJECTION|BRAIN_TEST) "NO_USE"
+        scope     (LOCAL|GLOBAL) "GLOBAL"
+        userLevel CDATA "0"
+        toolTip   CDATA "">
+
+<!ELEMENT Command EMPTY>
+    <!ATTLIST Command
+        name    CDATA #REQUIRED
+        command CDATA #REQUIRED
+        ul      CDATA "0"
+        toolTip CDATA "">
+
+<!ENTITY none "0">
+
+<!ELEMENT ENUM   EMPTY>	<!ATTLIST ENUM   fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                                                                           tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT SENUM  EMPTY> <!ATTLIST SENUM  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED                                                     tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT ICUT   EMPTY> <!ATTLIST ICUT   fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                       isMod (YES|NO) "NO" op CDATA #REQUIRED dop CDATA "" tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT SICUT  EMPTY> <!ATTLIST SICUT  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED isMod (YES|NO) "NO" op CDATA #REQUIRED dop CDATA "" tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT FCUT   EMPTY> <!ATTLIST FCUT   fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                       isMod (YES|NO) "NO" op CDATA #REQUIRED dop CDATA "" tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT SFCUT  EMPTY> <!ATTLIST SFCUT  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED isMod (YES|NO) "NO" op CDATA #REQUIRED dop CDATA "" tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT INT    EMPTY> <!ATTLIST INT    fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                       isMod (YES|NO) "NO"                                 tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT SINT   EMPTY> <!ATTLIST SINT   fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED isMod (YES|NO) "NO"                                 tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT FLOAT  EMPTY> <!ATTLIST FLOAT  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                       isMod (YES|NO) "NO"                                 tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT SFLOAT EMPTY> <!ATTLIST SFLOAT fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED isMod (YES|NO) "NO"                                 tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT LINT   EMPTY> <!ATTLIST LINT   fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                                                                           tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT SLINT  EMPTY> <!ATTLIST SLINT  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED                                                     tip CDATA "" ul CDATA "0" scope CDATA "" u CDATA "&none;">
+<!ELEMENT COLOR  EMPTY> <!ATTLIST COLOR  fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf"                                                                           tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT SCOLOR EMPTY> <!ATTLIST SCOLOR fn CDATA #REQUIRED sn CDATA "" va CDATA #REQUIRED pv CDATA "-inf : inf" st (ON|OFF) #REQUIRED                                                     tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT StatusRoot (StatusGroup*, STATUS*)>  <!ATTLIST StatusRoot  fn CDATA #REQUIRED sn CDATA "" st (ON|OFF) "OFF"     tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT StatusGroup (StatusGroup*, STATUS*)> <!ATTLIST StatusGroup fn CDATA #REQUIRED sn CDATA "" st (ON|OFF) "OFF"     tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT STATUS EMPTY>                        <!ATTLIST STATUS      fn CDATA #REQUIRED sn CDATA "" st (ON|OFF) #REQUIRED tip CDATA "" ul CDATA "0" scope CDATA "">
+<!ELEMENT LINK   EMPTY> <!ATTLIST LINK to CDATA #REQUIRED>
+
+<!ELEMENT ParameterDifferences (DIFFERENCE*)>
+
+<!ELEMENT DIFFERENCE EMPTY>
+    <!ATTLIST DIFFERENCE
+        group      CDATA #REQUIRED
+        name       CDATA #REQUIRED
+        windowName CDATA #REQUIRED
+        va         CDATA ""
+        st         CDATA "" 
+        op         CDATA "">
+
+<!ELEMENT WindowCorners (CORNERS*)>
+
+<!ELEMENT CORNERS EMPTY>
+    <!ATTLIST CORNERS
+        windowName CDATA #REQUIRED
+        x0         CDATA #REQUIRED
+        y0         CDATA #REQUIRED
+        x1         CDATA #REQUIRED
+        y1         CDATA #REQUIRED
+        x2         CDATA #REQUIRED
+        y2         CDATA #REQUIRED>
+
+<!ENTITY length "1">
+<!ENTITY energy "2">
+<!ENTITY energyMEV "3">
+
+<!ENTITY user "0">
+<!ENTITY superuser "1">
+<!ENTITY debug "3">
+
+<!ENTITY assocCutOptions "All=0, Connected=1, Unconnected=2">
+<!ENTITY drawTo          "Pixels = 0, Silicon Strips = 1, TRT_DriftCircle=2, LAr = 3, TILE = 4, Muon System = 5">
+<!ENTITY colorFn         "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4">
+<!ENTITY colorFnTRT      "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4, isOutlier = 5, driftSign = 6, threshold = 7">
+<!ENTITY colorFnMTr      "Constant = 0, Index = 1, Pt = 2">
+<!ENTITY colorFnCal      "Constant = 0, SubDetector = 1, Cluster = 2, Layer = 3, Energy = 4, Jet = 5, ECAL/HCAL = 6, Time = 7">
+<!ENTITY colorFnS3D      "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Group = 4, Layer = 5">
+<!ENTITY colorFnTrigS3D  "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4">
+<!ENTITY colorFnSiCluster "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4, Orientation=5">
+<!ENTITY colorFnPixCluster "Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4, Orientation=5, dE/dx=6">
+<!ENTITY colorFnSTr      "Constant = 0, Index = 1, Pt = 2, Particle Type = 3, Origin Vertex = 4">
+<!ENTITY colorFnRTr      "Constant = 0, Index = 1, Pt = 2, Collection = 3, Simulated Track = 4, RecVertex = 5, Objects = 7">
+<!ENTITY colorFnBasic    "Constant = 0, Index = 1">
+<!ENTITY colorFnBasicCollection "Constant = 0, Index = 1, Collection = 2">
+<!ENTITY colorFnBasicCollectionBJets "Constant = 0, Index = 1, Collection = 2, BJets = 3">
+
+<!ENTITY energyMode      "Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5">
+<!ENTITY symbol          "Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3">
+<!ENTITY pickingModes    "Event Data=0, Detectors=1">
+<!ENTITY frameCol        "0,8:14">
+<!ENTITY detectCol       "0:8,14">
+<!ENTITY dataCol         "0,8,14:28">
+<!ENTITY histoCol        "0,8,14:28">
+<!ENTITY real            "&lt;,&gt;">
+<!ENTITY eta             "&#x03B7;">
+<!ENTITY rho             "&#x03C1;">
+<!ENTITY phi             "&#x03A6;">
+<!ENTITY delta           "&#x0394;">
+<!ENTITY lambda          "&#x03BB;">
+<!ENTITY sigma           "&#x03C3;">
+<!ENTITY prime           "'">
+<!ENTITY ne              "!=">
+<!ENTITY le              "&lt;=">
+<!ENTITY ge              "&gt;=">
+<!ENTITY int             "=,&ne;,&lt;,&le;,&gt;,&ge;">
+<!ENTITY intEqual        "=">
+<!ENTITY modesFZ         "Standard = 0, RPC Middle 1 = 1, RPC Middle 2 = 2, RPC Outer = 3, MDT Inner and Extension = 4, MDT Middle = 5, MDT Outer = 6">
+<!ENTITY modesYX         "Standard = 0, TGC Inner 1 = 1,TGC Middle 1 = 2, TGC Middle 2 = 3, TGC Middle 3 = 4, MDT/CSC Inner 1 = 5, MDT Extension = 6, MDT Middle = 7, MDT Outer = 8, FCAL EM= 9, FCAL HAD 1= 10, FCAL HAD 2= 11, LAr Ecap Presamp= 12, LAr Ecap 1= 13, LAr Ecap 2= 14, LAr Ecap 3= 15, HEC 1= 16, HEC 2= 17, HEC 3= 18, HEC 4= 19, LAr Ecap Summed=20, HEC Summed=21, MBTS=22">
+
+]>
+
+
+<AtlantisConfiguration>
+	<Initialization>
+		<Interactions>
+			<InteractionControl projectionName="YX" defaultInDemoMode="YES" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="RubberbandYX" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Clock" fileName="Clock" toolTip="Clock Transformation"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="RZ" defaultInDemoMode="YES" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="Rubberband" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Skew" fileName="Skew" toolTip="Skew Interaction"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="XZ" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="Rubberband" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="YZ" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="Rubberband" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="FZ" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="Rubberband" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Skew" fileName="Skew" toolTip="Skew Interaction"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="FR" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="RubberbandYX" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="Skew" fileName="Skew" toolTip="Skew Interaction"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="VP" defaultInDemoMode="YES" availableInDemoMode="YES">
+				<Panel screenName="RubberBand" fileName="VPSelection" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="3D" defaultInDemoMode="NO" availableInDemoMode="NO">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="RubberBand" fileName="VPSelection" toolTip="Rubberband Selection"/>
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+				<Panel screenName="FishEye" fileName="FishEye" toolTip="FishEye Transformation"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+				<Panel screenName="Scale" fileName="ScaleCopy" toolTip="Scale Interaction"/>
+			</InteractionControl>
+			<InteractionControl projectionName="3DBox" defaultInDemoMode="NO" availableInDemoMode="NO">
+				<Panel screenName="ZR" fileName="3DBox" toolTip="Zoom/Rotate"/>
+			</InteractionControl>
+			<InteractionControl projectionName="LegoPlot" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="ZMR" fileName="ZMR" toolTip="Zoom/Move/Rotate"/>
+				<Panel screenName="SyncCursors" fileName="SynchroCursors" toolTip="Synchronised Cursors"/>
+			</InteractionControl>
+			<InteractionControl projectionName="TrackResidual" defaultInDemoMode="NO" availableInDemoMode="NO">
+				<Panel screenName="Pick" fileName="Pick" toolTip="Show Info for Picked Item"/>
+			</InteractionControl>
+			<InteractionControl projectionName="N3D" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="Rotate" fileName="NZMR" toolTip="Zoom/Move/Rotate"/>
+			</InteractionControl>
+			<InteractionControl projectionName="NYX" defaultInDemoMode="NO" availableInDemoMode="YES">
+			</InteractionControl>
+			<InteractionControl projectionName="NPhysics" defaultInDemoMode="NO" availableInDemoMode="YES">
+				<Panel screenName="Rotate" fileName="NZMR" toolTip="Zoom/Move/Rotate"/>
+			</InteractionControl>
+			<InteractionControl projectionName="EventInfo" defaultInDemoMode="NO" availableInDemoMode="YES">
+			</InteractionControl>
+		</Interactions>
+		<Canvas aspectRatio="0.8913308913308914" startupLayout="FULL SCREEN">
+			<UsedWindow group="Data" projection="YX" name="1"/>
+			<UsedWindow group="Data" projection="FR" name="2"/>
+			<UsedWindow group="Data" projection="FZ" name="3"/>
+			<UsedWindow group="Data" projection="YZ" name="4"/>
+			<UsedWindow group="Data" projection="RZ" name="5"/>
+			<UsedWindow group="Data" projection="VP" name="6"/>
+			<UsedWindow group="Data" projection="XZ" name="7"/>
+			<UsedWindow group="Data" projection="VP" name="8"/>
+			<UsedWindow group="Data" projection="LegoPlot" name="9"/>
+			<UsedWindow group="YX" projection="YX" name="L"/>
+			<UsedWindow group="YX" projection="YX" name="M"/>
+			<UsedWindow group="YX" projection="YX" name="R"/>
+			<UsedWindow group="Data" projection="YX" name="U"/>
+			<UsedWindow group="Data" projection="FR" name="C"/>
+			<UsedWindow group="LegoPlot" projection="LegoPlot" name="D"/>
+			<UsedWindow group="Data" projection="FZ" name="E"/>
+			<UsedWindow group="Data" projection="YX" name="S"/>
+			<UsedWindow group="Data" projection="YX" name="W"/>
+			<UsedWindow group="MuonTrack" projection="RZ" name="B"/>
+			<Layout startupWindow="S" startup="S36" name="LANDSCAPE">
+				<Window hPos="0" height="1" vPos="0" width="1" name="1"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="2"/>
+				<Window hPos="2" height="1" vPos="0" width="1" name="3"/>
+				<Window hPos="0" height="1" vPos="1" width="1" name="4"/>
+				<Window hPos="1" height="1" vPos="1" width="1" name="5"/>
+				<Window hPos="2" height="1" vPos="1" width="1" name="6"/>
+				<Window hPos="0" height="2" vPos="0" width="1" name="L"/>
+				<Window hPos="1" height="2" vPos="0" width="1" name="M"/>
+				<Window hPos="2" height="2" vPos="0" width="1" name="R"/>
+				<Window hPos="0" height="1" vPos="0" width="2" name="U"/>
+				<Window hPos="0" height="1" vPos="1" width="2" name="B"/>
+				<Window hPos="0" height="2" vPos="0" width="2" name="S"/>
+				<Window hPos="0" height="2" vPos="0" width="3" name="W"/>
+				<Page content="123456" name="Full"/>
+				<Page content="LMR" name="Vert"/>
+				<Page content="SR" name="Rect"/>
+				<Page content="UBR" name="Hori"/>
+				<Page content="W" name="W"/>
+			</Layout>
+			<Layout startupWindow="S" startup="SB" name="PORTRAIT">
+				<Window hPos="0" height="1" vPos="0" width="1" name="1"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="2"/>
+				<Window hPos="0" height="1" vPos="1" width="1" name="3"/>
+				<Window hPos="1" height="1" vPos="1" width="1" name="4"/>
+				<Window hPos="0" height="1" vPos="2" width="1" name="5"/>
+				<Window hPos="1" height="1" vPos="2" width="1" name="6"/>
+				<Window hPos="0" height="1" vPos="0" width="2" name="U"/>
+				<Window hPos="0" height="1" vPos="1" width="2" name="C"/>
+				<Window hPos="0" height="1" vPos="2" width="2" name="B"/>
+				<Window hPos="0" height="2" vPos="0" width="2" name="S"/>
+				<Window hPos="0" height="3" vPos="0" width="2" name="W"/>
+				<Page content="123456" name="Full"/>
+				<Page content="SB" name="Rect"/>
+				<Page content="UCB" name="Hori"/>
+				<Page content="W" name="W"/>
+			</Layout>
+			<Layout startupWindow="S" startup="S369" name="SQUARE B">
+				<Window hPos="0" height="1" vPos="0" width="1" name="1"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="2"/>
+				<Window hPos="2" height="1" vPos="0" width="1" name="3"/>
+				<Window hPos="0" height="1" vPos="1" width="1" name="4"/>
+				<Window hPos="1" height="1" vPos="1" width="1" name="5"/>
+				<Window hPos="2" height="1" vPos="1" width="1" name="6"/>
+				<Window hPos="0" height="1" vPos="2" width="1" name="7"/>
+				<Window hPos="1" height="1" vPos="2" width="1" name="8"/>
+				<Window hPos="2" height="1" vPos="2" width="1" name="9"/>
+				<Window hPos="0" height="3" vPos="0" width="3" name="W"/>
+				<Window hPos="0" height="3" vPos="0" width="2" name="S"/>
+				<Window hPos="0" height="3" vPos="0" width="1" name="L"/>
+				<Window hPos="1" height="3" vPos="0" width="1" name="M"/>
+				<Window hPos="2" height="3" vPos="0" width="1" name="R"/>
+				<Window hPos="0" height="1" vPos="0" width="3" name="U"/>
+				<Window hPos="0" height="1" vPos="1" width="3" name="C"/>
+				<Window hPos="0" height="1" vPos="2" width="3" name="B"/>
+				<Page content="123456789" name="Full"/>
+				<Page content="SR" name="Rect"/>
+				<Page content="LMR" name="Hori"/>
+				<Page content="UCB" name="Vert"/>
+				<Page content="W" name="W"/>
+			</Layout>
+			<Layout startupWindow="S" startup="SRB" name="SQUARE">
+				<Window hPos="0" height="1" vPos="0" width="1" name="1"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="2"/>
+				<Window hPos="2" height="1" vPos="0" width="1" name="3"/>
+				<Window hPos="0" height="1" vPos="1" width="1" name="4"/>
+				<Window hPos="1" height="1" vPos="1" width="1" name="5"/>
+				<Window hPos="2" height="1" vPos="1" width="1" name="6"/>
+				<Window hPos="0" height="1" vPos="2" width="1" name="7"/>
+				<Window hPos="1" height="1" vPos="2" width="1" name="8"/>
+				<Window hPos="2" height="1" vPos="2" width="1" name="9"/>
+				<Window hPos="0" height="2" vPos="0" width="2" name="S"/>
+				<Window hPos="0" height="2" vPos="0" width="1" name="L"/>
+				<Window hPos="1" height="2" vPos="0" width="1" name="M"/>
+				<Window hPos="2" height="2" vPos="0" width="1" name="R"/>
+				<Window hPos="0" height="1" vPos="0" width="2" name="U"/>
+				<Window hPos="0" height="1" vPos="1" width="2" name="C"/>
+				<Window hPos="0" height="1" vPos="2" width="2" name="D"/>
+				<Window hPos="0" height="1" vPos="2" width="3" name="B"/>
+				<Window hPos="0" height="3" vPos="0" width="3" name="W"/>
+				<Page content="123456789" name="Full"/>
+				<Page content="LMRB" name="Hori"/>
+				<Page content="UCD369" name="Vert"/>
+				<Page content="SRB" name="All"/>
+				<Page content="W" name="W"/>
+			</Layout>
+			<Layout startupWindow="1" startup="1234" name="FOUR SQUARES">
+				<Window hPos="0" height="1" vPos="0" width="1" name="1"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="2"/>
+				<Window hPos="0" height="1" vPos="1" width="1" name="3"/>
+				<Window hPos="1" height="1" vPos="1" width="1" name="4"/>
+				<Window hPos="0" height="1" vPos="1" width="2" name="B"/>
+				<Window hPos="0" height="2" vPos="0" width="2" name="W"/>
+				<Page content="1234" name="Four"/>
+				<Page content="12B" name="Three"/>
+				<Page content="W" name="W"/>
+			</Layout>
+			<Layout startupWindow="R" startup="DBLMR" name="FULL SCREEN">
+				<Window hPos="0" height="2" vPos="0" width="2" name="S"/>
+				<Window hPos="2" height="1" vPos="0" width="1" name="R"/>
+				<Window hPos="2" height="1" vPos="1" width="1" name="D"/>
+				<Window hPos="2" height="2" vPos="0" width="1" name="E"/>
+				<Window hPos="0" height="1" vPos="0" width="1" name="L"/>
+				<Window hPos="1" height="1" vPos="0" width="1" name="M"/>
+				<Window hPos="0" height="1" vPos="1" width="2" name="B"/>
+				<Window hPos="0" height="2" vPos="0" width="3" name="W"/>
+				<Page content="SE" name="Two"/>
+				<Page content="SRD" name="Three"/>
+				<Page content="LMRBD" name="Five"/>
+				<Page content="W" name="W"/>
+			</Layout>
+		</Canvas>
+	</Initialization>
+	<Parameters userLevel="0">
+		<SuperGroup userLevel="0" toolTip="Projection Selection" name="Projection">
+			<Group userLevel="0" guiUsage="NO_USE" scope="LOCAL" sname="" toolTip="Projection Parameters" name="Projection">
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1320.0" fn="Radius" tip="default detector radius"/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="2250.0" fn="Length" tip="default detector length"/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1320.0" fn="TrackingRadius" tip="default detector radius"/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="2250.0" fn="TrackingLength" tip="default detector length"/>
+				<FLOAT u="2" sn="" ul="3" scope="" isMod="NO" pv="1:inf" va="1000.0" fn="Energy Max" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Skip Data" tip="Skip drawing of data during interaction if F key down"/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="" toolTip="YX Projection" name="YX">
+				<ENUM sn="View" scope="" ul="0" pv="Standard = 0, TGC Inner 1 = 1,TGC Middle 1 = 2, TGC Middle 2 = 3, TGC Middle 3 = 4, MDT/CSC Inner 1 = 5, MDT Extension = 6, MDT Middle = 7, MDT Outer = 8, FCAL EM= 9, FCAL HAD 1= 10, FCAL HAD 2= 11, LAr Ecap Presamp= 12, LAr Ecap 1= 13, LAr Ecap 2= 14, LAr Ecap 3= 15, HEC 1= 16, HEC 2= 17, HEC 3= 18, HEC 4= 19, LAr Ecap Summed=20, HEC Summed=21, MBTS=22" va="7" fn="Mode" tip="View Mode"/>
+				<ENUM sn="Summed LAr binning" scope="GLOBAL" ul="0" pv="0.1x0.1=1,0.2x0.2=2,split=3" va="1" fn="LArBin" tip="Shows the binning for the LAr Summed endcap view for &eta; and &phi;"/>
+				<ENUM sn="Summed HEC binning" scope="GLOBAL" ul="0" pv="0.1x0.1=1,0.2x0.2=2,split=3" va="2" fn="HECBin" tip="Shows the binning for the HEC Summed endcap view for &eta; and &phi;"/>
+				<FLOAT u="0" sn="Eta of split binning" ul="0" scope="" isMod="NO" pv="0:inf" va="2.5" fn="SplitEta" tip="On summed binning seperates the split binning 0.1x0.1 below eta and 0.2x0.2 above eta, minimum 1.2 and only keeps 1 decimal place"/>
+				<STATUS sn="Draw FCAL inside HEC" ul="0" st="OFF" scope="GLOBAL" fn="DrawFCAL" tip="Draws the FCAL layers inside the relevant individual layers of the HEC (2,3,4)"/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:4" st="OFF" va="1" fn="CSC Gas Gap" tip="Gas Gap in Cathode Strip Chambers"/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:3" st="OFF" va="1" fn="TGC Gas Gap" tip="Gas Gap in Thin Gap Chambers"/>
+				<FLOAT u="0" sn="&phi; for Clock interaction" ul="1" scope="" isMod="NO" pv="0:360" va="0.0" fn="Phi" tip="&phi; angle for clock zoom interaction (Clock interaction must be activated)"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="1.5" fn="FishEye" tip="Fish Eye zoom factor value"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="3.0" fn="Clock" tip="Clock zoom factor value"/>
+				<FLOAT u="1" sn="&rho; To" ul="3" scope="" isMod="NO" pv="0:inf" va="1100.0" fn="rTo" tip="&rho; value for Fish Eye zoom (interaction)"/>
+				<STATUS sn="&rho;Z Cutting Plane" ul="0" st="OFF" scope="" fn="RZ Cutting Plane" tip="Show cutting plane of projection &rho;Z"/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="&phi;&eta;" toolTip="&phi;&eta; Projection" name="VP">
+				<Command command="SETORIGINALPRIMARYVERTEX" ul="0" name="Set Original Primary Vertex" toolTip="Set original primary vertex of the current event"/>
+				<ENUM sn="View" scope="" ul="0" pv="Standard=0,SpacePoint=1,TRT_DriftCircle=2,ECAL Sampling 0=3,ECAL Sampling 1=4,ECAL Sampling 2=5,ECAL Sampling 3=6,HCAL Sampling 0=7,HCAL Sampling 1=8,HCAL Sampling 2=9,HCAL Sampling 3=10" va="0" fn="Mode" tip="View Mode"/>
+				<STATUS sn="&eta; Vertex" ul="0" st="ON" scope="" fn="Eta Vertex" tip="Recalculates &eta; from &rho; and z for calorimeter cells from primary vertex instead of from 0 (shall always be on)"/>
+				<LINK to="Event.XVtx"/>
+				<LINK to="Event.YVtx"/>
+				<LINK to="Event.ZVtx"/>
+				<SFLOAT u="1" sn="&rho; Max" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="122.0" fn="R Max" tip="Maximal &rho; of Tip of V"/>
+				<SFLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="265.0" fn="Z Max" tip="Maximal Z of Tip of V"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="5.0" fn="Gradient" tip="Gradient of V Arms"/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" st="OFF" va="0.4" fn="Short V" tip="Draw Short V (only if SpacePoint are turned off)"/>
+				<SCOLOR sn="VPlot calo island" scope="" ul="0" pv="0:8,14" st="ON" va="8" fn="VPlot Island" tip="Select the color for islands for calorimeter detail zoom (island is a common structure for all calo layers)"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="DrawApex" tip="Draw Symbol at Apex of V"/>
+				<ENUM sn="Jet" scope="" ul="0" pv="ET=0, E=1" va="0" fn="Jet" tip="Select the Energy Type for Drawing Jets"/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="-inf:inf" va="-1" fn="Initial Frame" tip=""/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="3" fn="Frames Count" tip=""/>
+				<INT u="0" sn="&phi; Wrap" ul="3" scope="" isMod="NO" pv="0:inf" va="0" fn="Phi Wrap" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="&rho;Z" toolTip="&rho;Z Projection" name="RZ">
+				<ENUM sn="View" scope="" ul="3" pv="Standard=0" va="0" fn="Mode" tip=""/>
+				<FLOAT u="0" sn="&phi;" ul="0" scope="" isMod="NO" pv="0:360" va="90.0" fn="Phi" tip="Cutting Plane Angle"/>
+				<STATUS sn="TRT_DriftCircle" ul="0" st="OFF" scope="" fn="TRT" tip="Draw TRT_DriftCircle"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="FishEye" tip=""/>
+				<FLOAT u="1" sn="&rho; To" ul="3" scope="" isMod="NO" pv="0:inf" va="1100.0" fn="rTo" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="2300.0" fn="zTo" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="&phi;&rho;" toolTip="&phi;&rho; Projection" name="FR">
+				<LINK to="YX.Mode"/>
+				<LINK to="YX.LArBin"/>
+				<LINK to="YX.HECBin"/>
+				<LINK to="YX.DrawFCAL"/>
+				<LINK to="YX.SplitEta"/>
+				<LINK to="YX.CSCGasGap"/>
+				<LINK to="YX.TGCGasGap"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="ON" va="1.5" fn="FishEye" tip=""/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="ON" va="1.1" fn="Horizontal Zoom" tip="Initial Horizontal Zoom Factor"/>
+				<FLOAT u="1" sn="&rho; To" ul="3" scope="" isMod="NO" pv="0:inf" va="1100.0" fn="rTo" tip=""/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="-inf:inf" va="-1" fn="Initial Frame" tip=""/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="3" fn="Frames Count" tip=""/>
+				<INT u="0" sn="&phi; Wrap" ul="3" scope="" isMod="NO" pv="0:inf" va="0" fn="Phi Wrap" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="&phi;Z" toolTip="&phi;Z Projection" name="FZ">
+				<ENUM sn="View" scope="" ul="0" pv="Standard = 0, RPC Middle 1 = 1, RPC Middle 2 = 2, RPC Outer = 3, MDT Inner and Extension = 4, MDT Middle = 5, MDT Outer = 6" va="0" fn="Mode" tip="View Mode"/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:2" st="OFF" va="1" fn="RPC Gas Gap" tip="Gas Gap in Resistive Plate Chamber"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="FishEye" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="2300.0" fn="zTo" tip=""/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="-inf:inf" va="-1" fn="Initial Frame" tip=""/>
+				<INT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="3" fn="Frames Count" tip=""/>
+				<INT u="0" sn="&phi; Wrap" ul="3" scope="" isMod="NO" pv="0:inf" va="0" fn="Phi Wrap" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="X'Z" toolTip="X'Z Projection" name="XZ">
+				<Command command="PREVSECTOR" ul="0" name="Prev Sector" toolTip="Show Previous MDT Sector"/>
+				<Command command="NEXTSECTOR" ul="0" name="Next Sector" toolTip="Show Next MDT Sector"/>
+				<LINK to="YZ.Mode"/>
+				<LINK to="YZ.Phi"/>
+				<LINK to="YZ.FishEye"/>
+				<LINK to="YZ.rTo"/>
+				<LINK to="YZ.zTo"/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="Y'Z" toolTip="Y'Z Projection" name="YZ">
+				<ENUM sn="View" scope="" ul="3" pv="Standard=0" va="0" fn="Mode" tip=""/>
+				<FLOAT u="0" sn="&phi;" ul="0" scope="" isMod="NO" pv="0:360" va="0.0" fn="Phi" tip="&phi; of Y' axis"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Fish Eye" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="1100.0" fn="rTo" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="2300.0" fn="zTo" tip=""/>
+			</Group>
+			<Group userLevel="3" guiUsage="PROJECTION" scope="LOCAL" sname="3D" toolTip="3D Parallel Projection" name="3D">
+				<ENUM sn="View" scope="" ul="3" pv="Standard=0" va="0" fn="Mode" tip=""/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-1.:1.0" va="0.9768" fn="x Axis" tip="x of Rotation Axis"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-1.:1.0" va="0.14" fn="y Axis" tip="y of Rotation Axis"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-1.:1.0" va="0.1623" fn="z Axis" tip="z of Rotation Axis"/>
+				<FLOAT u="0" sn="&phi;" ul="0" scope="" isMod="NO" pv="0:360" va="0.0" fn="Phi" tip="&phi; of H axis"/>
+				<SFLOAT u="0" sn="" ul="3" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="FishEye" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="1100.0" fn="rTo" tip=""/>
+				<FLOAT u="1" sn="" ul="3" scope="" isMod="NO" pv="0:inf" va="2300.0" fn="zTo" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="3DBox" toolTip="3D Box Projection" name="3DBox">
+				<LINK to="3D.Mode"/>
+				<LINK to="3D.xAxis"/>
+				<LINK to="3D.yAxis"/>
+				<LINK to="3D.zAxis"/>
+				<FLOAT u="0" sn="&phi;" ul="0" scope="" isMod="NO" pv="0:360" va="0.0" fn="Phi" tip="&phi; Angle of H axis"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="0.8" fn="Scale" tip=""/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="1.0E-4" fn="ZP" tip=""/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="0.2" fn="xz" tip=""/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="-0.05" fn="yz" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="ellipses" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="LegoPlot" toolTip="Lego Plot Projection" name="LegoPlot">
+				<Command command="LEGOTRIGGER" ul="0" name="Trigger Debugging" toolTip="Display 4 LegoPlots for trigger debugging"/>
+				<Command command="RETURNLEGOTRIGGER" ul="0" name="Return" toolTip="Return from LegoPlots for trigger debugging"/>
+				<ENUM sn="Calo View" scope="" ul="0" pv="Calo=0, LVL1TriggerTower=1, LVL1JetElement=2" va="0" fn="Mode" tip="Select Data Type for View"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:14000" va="0.0" fn="ET Axis Height" tip="Maximal Height in GeV of ET Axis (0 = Auto)"/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Scale To AOD" tip="Scale to object data, rather than cells (only available if AOD data is switched on and Et axis height=0)"/>
+				<ENUM sn="Fill Towers" scope="" ul="0" pv="Cells=0, AOD=1, Neither=2, Both=3" va="0" fn="Tower Outlines" tip="Hide the selected towers colour but leave their outline"/>
+				<INT u="0" sn="&phi; Cells" ul="0" scope="" isMod="NO" pv="1:1000" va="128" fn="nphicells" tip="Number of Phi Bins"/>
+				<INT u="0" sn="&eta; Cells" ul="0" scope="" isMod="NO" pv="1:4000" va="200" fn="netacells" tip="Number of Eta Bins"/>
+				<FLOAT u="2" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="0.05" fn="Lego Cut" tip="Minimum Lego Bar Energy Drawn"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="0.0" fn="Jet Circle Radius" tip="Jet Circle Radius"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Jet Text" tip="Draw the jet ET as text next to circle"/>
+				<ENUM sn="" scope="" ul="0" pv="standard=0,logarithmic=1,square root=2" va="0" fn="Scale" tip="Scale Type"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Reverse" tip="Reverse &eta;"/>
+				<STATUS sn="Main Legend" ul="0" st="ON" scope="" fn="MainLegend" tip="Includes: Missing Et, cell colours, Max Et, trigger decsion"/>
+				<STATUS sn="L1 ET Legend" ul="0" st="ON" scope="" fn="L1EtLegend" tip="L1 sum ET and missing ET"/>
+				<STATUS sn="L1 Item list" ul="0" st="OFF" scope="" fn="L1Items" tip="Display the L1 item list"/>
+				<STATUS sn="L2 Item list" ul="0" st="OFF" scope="" fn="L2Items" tip="Display the L2 item list"/>
+				<STATUS sn="EF Item list" ul="0" st="OFF" scope="" fn="EFItems" tip="Display the EF item list"/>
+				<STATUS sn="Draw Plot" ul="0" st="ON" scope="" fn="DrawPlot" tip="Use to hide the Lego plot for easier viewing of legend"/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="GLOBAL" sname="Residual" toolTip="Track Residual Projection" name="TrackResidual">
+				<ENUM sn="" scope="" ul="0" pv="linear=0,logarithmic=1" va="0" fn="Scale" tip="Scale Type"/>
+				<STATUS sn="Show Error Bar" ul="0" st="OFF" scope="" fn="ErrorBar" tip="Show error bar for each residual"/>
+				<STATUS sn="Show Loc2/Pull2" ul="0" st="OFF" scope="" fn="ShowExtra" tip="Show extra residual information"/>
+			</Group>
+			<Group userLevel="1" guiUsage="PROJECTION" scope="LOCAL" sname="N3D" toolTip="New 3D Projection" name="N3D">
+				<ENUM sn="View" scope="" ul="1" pv="Standard=0" va="0" fn="Mode" tip="View Mode"/>
+				<STATUS sn="Draw Axis" ul="0" st="ON" scope="" fn="Axis" tip="Draw guide axis"/>
+			</Group>
+			<Group userLevel="1" guiUsage="PROJECTION" scope="LOCAL" sname="Physics" toolTip="New 3D Physics Projection" name="NPhysics">
+				<ENUM sn="View" scope="" ul="1" pv="Standard=0" va="0" fn="Mode" tip="View Mode"/>
+				<STATUS sn="Draw Axis" ul="0" st="OFF" scope="" fn="Axis" tip="Draw guide axis"/>
+			</Group>
+			<Group userLevel="1" guiUsage="PROJECTION" scope="LOCAL" sname="NYX" toolTip="New YX Projection" name="NYX">
+				<ENUM sn="View" scope="" ul="1" pv="Standard=0" va="0" fn="Mode" tip="View Mode"/>
+				<STATUS sn="Draw Axis" ul="0" st="OFF" scope="" fn="Axis" tip="Draw guide axis"/>
+			</Group>
+			<Group userLevel="0" guiUsage="PROJECTION" scope="LOCAL" sname="Event Info" toolTip="Display Event Info Window" name="EventInfo">
+				<ENUM sn="View" scope="" ul="3" pv="Standard=0" va="0" fn="Mode" tip=""/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Data Type Selection" name="Data">
+			<Group userLevel="0" guiUsage="TABLE" scope="LOCAL" sname="" toolTip="Data To Be Drawn" name="Data">
+				<StatusRoot sn="" ul="0" st="OFF" scope="" fn="Status" tip="Data Selection Status">
+					<StatusGroup sn="" ul="0" st="OFF" scope="" fn="InDet" tip="Inner Detector">
+						<STATUS sn="Track Collections" ul="0" st="ON" scope="GLOBAL" fn="InDetTrack" tip="Reconstructed Inner Detector Track Collections"/>
+						<STATUS sn="Segment Collections" ul="0" st="OFF" scope="GLOBAL" fn="InDetSegment" tip="Reconstructed InDet Segment Collections"/>
+						<STATUS sn="SpacePoint" ul="0" st="ON" scope="GLOBAL" fn="S3D" tip="Silicon 3D Space Points"/>
+						<STATUS sn="SCT_Cluster" ul="0" st="OFF" scope="GLOBAL" fn="SiCluster" tip="Silicon Strip Cluster"/>
+						<STATUS sn="PixelCluster" ul="0" st="OFF" scope="" fn="PixelCluster" tip="Pixel Cluster"/>
+						<STATUS sn="TrigSiSpacePoint" ul="0" st="OFF" scope="GLOBAL" fn="TrigS3D" tip="Online Silicon 3D Space Points"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="PixelRDO" tip="Pixel Raw Data Object"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="SiClusterRDO" tip="Silicon Cluster Raw Data Object"/>
+						<STATUS sn="TRT_DriftCircle" ul="0" st="OFF" scope="GLOBAL" fn="TRT" tip="TRT_DriftCircle Hits"/>
+						<STATUS sn="SimChargedTrack" ul="0" st="OFF" scope="GLOBAL" fn="STr" tip="Simulated Tracks (Charged Truth)"/>
+						<STATUS sn="SimVertex" ul="0" st="OFF" scope="GLOBAL" fn="SVx" tip="Simulated Vertices (Truth Vertex)"/>
+						<STATUS sn="RecVertex" ul="0" st="OFF" scope="GLOBAL" fn="RVx" tip="Reconstructed Vertices"/>
+					</StatusGroup>
+					<StatusGroup sn="" ul="0" st="OFF" scope="" fn="Calo" tip="Calorimeter">
+						<STATUS sn="Cluster Collections" ul="0" st="OFF" scope="GLOBAL" fn="Cluster" tip="Cluster Collections"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="LAr" tip="Liquid Argon Calorimeter"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="TILE" tip="Tile Calorimeter"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="HEC" tip="Hadronic End Cap"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="FCAL" tip="Forward Calorimeter"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="MBTS" tip="Minimum Bias Trigger Scintillator"/>
+						<STATUS sn="SimNeutralTrack" ul="0" st="OFF" scope="GLOBAL" fn="SNP" tip="Simulated Neutral Particles in Calorimeter (Neutral Truth)"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="EmTauROI" tip="Electromagnetic/Tau Region of Interest"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="JetROI" tip="Jet Region of Interest"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="LVL1TriggerTower" tip="Level-1 Calorimeter Trigger Input Data: e/gamma, tau/had"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="LVL1JetElement" tip="Level-1 Calorimeter Trigger Input Data: jet, ET-Miss/ET-Sum"/>
+					</StatusGroup>
+					<StatusGroup sn="" ul="0" st="OFF" scope="" fn="MuonDet" tip="Muon Detector">
+						<STATUS sn="Track Collections" ul="0" st="ON" scope="GLOBAL" fn="MuonTrack" tip="Reconstructed Muon Track Collections"/>
+						<STATUS sn="Segment Collections" ul="0" st="ON" scope="GLOBAL" fn="MuonSegment" tip="Reconstructed Muon Segment Collections"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="MDT" tip="Monitored Drift Tube Chambers"/>
+						<STATUS sn="CSC Clusters" ul="0" st="ON" scope="GLOBAL" fn="CSC" tip="Cathode Strip Chambers"/>
+						<STATUS sn="CSC Digits" ul="0" st="ON" scope="GLOBAL" fn="CSCD" tip="Cathode Strip Chambers Digits"/>
+						<STATUS sn="RPC Collections" ul="0" st="ON" scope="GLOBAL" fn="RPC" tip="Resistive Plate Chamber"/>
+						<STATUS sn="" ul="0" st="ON" scope="GLOBAL" fn="TGC" tip="Thin Gap Chambers"/>
+						<STATUS sn="SimMuonTrack" ul="0" st="OFF" scope="GLOBAL" fn="SMTr" tip="Simulated Muon Tracks"/>
+						<STATUS sn="" ul="0" st="OFF" scope="GLOBAL" fn="MuonROI" tip="Muon Region of Interest"/>
+					</StatusGroup>
+					<StatusGroup sn="" ul="0" st="OFF" scope="" fn="Objects" tip="Physics Objects and Analysis Object Data">
+						<STATUS sn="Jet Collections" ul="0" st="OFF" scope="GLOBAL" fn="Jet" tip="Jet Collections"/>
+						<STATUS sn="ETMis Collections" ul="0" st="OFF" scope="GLOBAL" fn="ETMis" tip="Missing ET Collections"/>
+						<STATUS sn="BJet Collections" ul="0" st="OFF" scope="GLOBAL" fn="BJet" tip="B-tagged Jet"/>
+						<STATUS sn="Electron Collections" ul="0" st="OFF" scope="GLOBAL" fn="Electron" tip="Electron"/>
+						<STATUS sn="Muon Collections" ul="0" st="OFF" scope="GLOBAL" fn="Muon" tip="Muon"/>
+						<STATUS sn="Photon Collections" ul="0" st="OFF" scope="GLOBAL" fn="Photon" tip="Photon"/>
+						<STATUS sn="Taujet Collections" ul="0" st="OFF" scope="GLOBAL" fn="TauJet" tip="Tau"/>
+						<STATUS sn="CompositeParticle Collections" ul="0" st="OFF" scope="GLOBAL" fn="CompositeParticle" tip="CompositeParticle from TruthParticle"/>
+					</StatusGroup>
+				</StatusRoot>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Apply Selection Cuts on Various Datatypes" name="Cuts">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="InDet" toolTip="Inner Detector Cuts" name="CutsInDet">
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="1.0" fn="Pt" tip="Transverse Momentum of Tracks"/>
+				<SFCUT u="1" sn="" dop="&lt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="0.25" fn="d0" tip="Impact Parameter of Tracks"/>
+				<SFCUT u="1" sn="" dop="&lt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="20.0" fn="z0" tip="|z0| for Tracks"/>
+				<SFCUT u="1" sn="" dop="&lt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="2.0" fn="d0 Loose" tip="Impact Parameter of Tracks"/>
+				<SFCUT u="1" sn="" dop="&lt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="0.25" fn="z0-zVtx" tip="|z0-zPrimaryVertex| for Tracks"/>
+				<SICUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="Layer" tip="Cut inner subdetectors by Layer"/>
+				<SICUT u="0" sn="Number Pixel Hits" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:10" st="OFF" va="2" fn="Num Pixel" tip="Cut by number of pixel hits on reconstructed track"/>
+				<SICUT u="0" sn="Number SCT Hits" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:25" st="OFF" va="7" fn="Num SCT" tip="Cut by number of SCT hits on reconstructed track"/>
+				<SICUT u="0" sn="Number TRT Hits" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:50" st="OFF" va="15" fn="Num TRT" tip="Cut by number of TRT hits on reconstructed track"/>
+				<SICUT u="0" sn="Sim. Particle PDG-ID" dop="&lt;" ul="0" scope="" isMod="YES" op="&int;" pv="0:inf" st="OFF" va="40" fn="STr Code" tip="Simulated Tracks by PDG table particle identifier"/>
+				<SICUT u="0" sn="Sim. Particle Barcode" dop="&intEqual;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="STr" tip="Simulated Tracks by Identifier"/>
+				<SENUM sn="Sim. Particle Type" scope="" ul="0" pv="charged hadron=1,tau=2,electron=3,muon=4,neutral hadron=5,photon=6,neutrino=7,W=10,From Ntuple=11" st="OFF" va="1" fn="STr Type" tip="Simulated Tracks by Particle Type"/>
+				<SICUT u="0" sn="SimVertex" dop="&intEqual;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="SVx" tip="Simulated Vertex by Identifier"/>
+				<ENUM sn="SCT/Pixel" scope="" ul="0" pv="All=-1,Endcap-=0,Barrel=1,Endcap+=2" va="-1" fn="SCT" tip="Choose Semiconductor Tracker Block"/>
+				<ENUM sn="TRT_DriftCircle" scope="" ul="0" pv="All=-1,Barrel-=1,Barrel+=2" va="-1" fn="TRT" tip="Choose Transition Radiation Tracker Block"/>
+				<SICUT u="0" sn="&eta; module" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="-inf:inf" st="OFF" va="0" fn="Eta Module" tip="SpacePoints by SCT/Pixel &eta; Module"/>
+				<SICUT u="0" sn="&phi; module" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="Phi Module" tip="SpacePoints by SCT/Pixel &phi; Module"/>
+				<SICUT u="0" sn="Track Index" dop="&intEqual;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="RTrIndex" tip="Reconstructed Track by Index"/>
+				<ENUM sn="Hits By SimTrack" scope="" ul="0" pv="All=0, Connected=1, Unconnected=2" va="0" fn="Hits By STr" tip="Hits by Simulated Tracks"/>
+				<ENUM sn="Hits By RecTrack" scope="" ul="0" pv="All=0, Connected=1, Unconnected=2" va="0" fn="Hits By RTr" tip="Hits by Recontructed Tracks"/>
+				<ENUM sn="Hits By Segment" scope="" ul="0" pv="All=0, Connected=1, Unconnected=2" va="0" fn="Hits By Segment" tip="Hits by Recontructed Segment"/>
+				<ENUM sn="" scope="" ul="0" pv="Noise=0,Good=1,All=2" va="2" fn="Hit Type" tip="Hit by Type"/>
+				<SICUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="Group" tip="SpacePoints by Group"/>
+				<SENUM sn="TRT Threshold" scope="" ul="0" pv="low=0,high=1" st="OFF" va="1" fn="Threshold" tip="TRT_DriftCircle Threshold"/>
+				<STATUS sn="TRT Noise Cut" ul="0" st="OFF" scope="" fn="Noise" tip="TRT_DriftCircle Noise Cut"/>
+				<SFCUT u="0" sn="TRT Time Over Threshold" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="0:inf" st="OFF" va="10.0" fn="TRTTimeOverThreshold" tip="TRT Drift Circle Time Over Threshold Cut"/>
+				<SICUT u="0" sn="Author" dop="&intEqual;" ul="0" scope="" isMod="YES" op="&int;" pv="0:inf" st="OFF" va="1" fn="trackAuthor" tip="TrigInDetTrack"/>
+				<SICUT u="0" sn="RVx tracks" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:1000" st="ON" va="3" fn="NumRVxTracks" tip="Cut by number of tracks on reconstructed vertex"/>
+				<SICUT u="0" sn="RVx primary only" dop="&ge;" ul="0" scope="" isMod="NO" op="&int;" pv="0:10" st="OFF" va="1" fn="PrimaryRVx" tip="Cut on primary vertex identifier"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Calo" toolTip="Calorimeter Cuts" name="CutsCalo">
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="0.2" fn="LAr ET" tip="LAr transverse energy (Et) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.2" fn="LAr Energy" tip="LAr energy (E) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.5" fn="LAr Energy Layer 0" tip="LAr energy (E) cut for layer 0 only (presampler)"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.06" fn="LAr Energy Layer 1" tip="LAr energy (E) cut for layer 1 only"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.155" fn="LAr Energy Layer 2" tip="LAr energy (E) cut for layer 2 only"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.125" fn="LAr Energy Layer 3" tip="LAr energy (E) cut for layer 3 only"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="0.1" fn="Tile ET" tip="Tile transverse energy (Et) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="0.25" fn="Tile Energy Bottom" tip="Tile energy (E) cut lower threshold"/>
+				<SFCUT u="2" sn="" dop="&lt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="100.0" fn="Tile Energy Up" tip="Tile energy (E) cut upper threshold"/>
+				<SICUT u="0" sn="" dop="&lt;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="1" fn="Tile PMT ADC" tip="Tile PMT1 and PMT2 ADC Status cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="0.5" fn="FCAL ET" tip="FCAL transverse energy (Et) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="OFF" va="2.0" fn="FCAL Energy" tip="FCAL energy (E) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="0.2" fn="HEC ET" tip="HEC transverse energy (Et) cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="2.5" fn="HEC Energy" tip="HEC energy (E) cut"/>
+				<SFCUT u="3" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.00001:inf" st="ON" va="0.01" fn="MBTS Energy" tip="MBTS energy (E) cut"/>
+				<ENUM sn="LAr region" scope="" ul="0" pv="All=-1,Endcap-=0,Endcap+=1,Endcaps (both)=2,Barrel=3" va="-1" fn="LAr" tip="LAr detector region cut"/>
+				<ENUM sn="FCAL region" scope="" ul="0" pv="All=-1,Endcap-=0,Endcap+=1" va="-1" fn="FCAL" tip="FCAL detector region cut"/>
+				<ENUM sn="HEC region" scope="" ul="0" pv="All=-1,Endcap-=-2,Endcap+=2" va="-1" fn="HEC" tip="HEC detector region cut"/>
+				<ENUM sn="MBTS region" scope="" ul="0" pv="All=-1,Endcap-=0,Endcap+=1" va="-1" fn="MBTS" tip="MBTS detector region cut"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="1.0" fn="Cluster ET" tip="Transverse Momentum of Clusters"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0001:inf" st="ON" va="0.2" fn="LVL1Trigger ET" tip="Transverse Energy (Level-1 Trigger)"/>
+				<SICUT u="0" sn="Layer (sampling)" dop="&gt;" ul="0" scope="" isMod="NO" op="&int;" pv="0:3" st="OFF" va="0" fn="Layer" tip="Cut by calorimeter layer (sampling)"/>
+				<SENUM sn="Cell Quality" scope="" ul="0" pv="Good=0, Bad=1" st="ON" va="0" fn="Cell Quality" tip="Cut by calorimeter cell quality"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="MuonDet" toolTip="Muon Detector Cuts" name="CutsMuon">
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="OFF" va="20.0" fn="Pt" tip="Transverse Momentum of Muon Tracks"/>
+				<LINK to="CutsInDet.HitsByRTr"/>
+				<LINK to="CutsInDet.HitsBySegment"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="1" scope="" isMod="YES" op="&real;" pv="0.:inf" st="ON" va="75000.0" fn="Charge" tip="Charge (CSC's)"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Objects" toolTip="Physics Object and Analysis Object Data Cuts" name="CutsObjects">
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="ON" va="15.0" fn="Jet ET" tip="Transverse Momentum of Jets"/>
+				<SFCUT u="0" sn="" dop="&lt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:1.0" st="ON" va="0.95" fn="Jet EMfraction" tip="EM-fraction of Jets"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:1.0" st="ON" va="0.75" fn="Jet VxFraction" tip="Jet Vertex Fraction"/>
+			    <ENUM   fn="Jet BTagger" sn="BTagger" va="0" pv= "None=0" tip="Select B Tagger to use"/>               
+                <SFCUT  fn="Jet BTag weight" sn="BTag weight" va="0.0" pv="-inf:inf" op="&gt;" st="ON" tip="B-tagging Algorithm's Weight"/>   
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0:inf" st="ON" va="15.0" fn="ETMis" tip="Missing Energy"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:inf" st="ON" va="5.0" fn="Electron Pt" tip="Transverse Momentum"/>
+				<SICUT u="0" sn="" dop="&intEqual;" ul="0" scope="" isMod="NO" op="&intEqual;" pv="0:inf" st="OFF" va="0" fn="Electron isEM" tip="Electromagnetic Criteria passed (bitmap)"/>
+				<SENUM sn="Electron isEMString" scope="" ul="0" pv="TightPP=0,Tight=1,Medium=2,Loose=3" st="ON" va="1" fn="Electron isEMString" tip="Electromagnetic Criteria"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:inf" st="OFF" va="0.0" fn="Electron eOverp" tip="Ratio of Energy over Momentum"/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Electron hasTrack" tip="Require matching Track for AOD Electron"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:inf" st="ON" va="5.0" fn="Muon Pt" tip="Transverse Momentum"/>
+				<SFCUT u="0" sn="" dop="&lt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:inf" st="OFF" va="0.0" fn="Muon chi2" tip="Fit Chi2"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:inf" st="ON" va="5.0" fn="Photon Pt" tip="Transverse Momentum"/>
+				<SICUT u="0" sn="" dop="&intEqual;" ul="0" scope="" isMod="NO" op="&intEqual;" pv="0:inf" st="OFF" va="0" fn="Photon isEM" tip="Electromagnetic Criteria passed (bitmap)"/>
+				<SENUM sn="Photon isEMString" scope="" ul="0" pv="Tight=0,Loose=1" st="ON" va="1" fn="Photon isEMString" tip="Electromagnetic Criteria"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:inf" st="ON" va="5.0" fn="TauJet Pt" tip="Transverse Momentum"/>
+				<SICUT u="0" sn="" dop="&intEqual;" ul="0" scope="" isMod="YES" op="&int;" pv="0:inf" st="ON" va="1" fn="TauJet Charge" tip="Total Charge"/>
+				<SICUT u="0" sn="" dop="&le;" ul="0" scope="" isMod="YES" op="&int;" pv="0:inf" st="ON" va="3" fn="TauJet NumTracks" tip="Number of Tracks"/>
+				<SENUM sn="TauJet isTauString" scope="" ul="0" pv="TauCutTight=0,TauCutMedium=1,TauCutLoose=2,TauLlhTight=3,TauLlhMedium=4,TauLlhLoose=5" st="ON" va="1" fn="TauJet isTauString" tip="TauJet Criteria"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:inf" st="OFF" va="0.3" fn="TauJet isolFrac" tip="Isolation Fraction"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="-inf:inf" st="OFF" va="-2.0" fn="TauJet logLhRatio" tip="Log-likelihood Ratio between Tau and Jet"/>
+				<SFCUT u="2" sn="" dop="&gt;" ul="0" scope="" isMod="YES" op="&real;" pv="0.0:inf" st="ON" va="5.0" fn="BJet Pt" tip="Transverse Momentum"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:1.0" st="ON" va="0.9" fn="BJet lhSig" tip="Likelihood Significance"/>
+				<SFCUT u="0" sn="" dop="&gt;" ul="0" scope="" isMod="NO" op="&real;" pv="0.0:inf" st="OFF" va="0.0" fn="BJet weight" tip="B-tagging Algorithm's Weight"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="ATLAS" toolTip="Cuts throughout ATLAS" name="CutsATLAS">
+				<Command command="CC" ul="0" name="Toggle Standard" toolTip="Toggle Common Cuts"/>
+				<SICUT u="0" sn="" dop="&lt;" ul="0" scope="" isMod="NO" op="&int;" pv="0:inf" st="OFF" va="0" fn="Index" tip="Cut by Index"/>
+				<FLOAT u="0" sn="&phi;" ul="0" scope="" isMod="NO" pv="-inf:inf" va="0.0" fn="Phi Middle" tip="Central &phi; value for &phi; Cut (in degrees)"/>
+				<SFLOAT u="0" sn="Cut &phi;" ul="0" scope="" isMod="NO" pv="0:720" st="OFF" va="0.0" fn="Cut Phi" tip="&delta;&phi; for &phi; Cut (in degrees)"/>
+				<FLOAT u="0" sn="&eta;" ul="0" scope="" isMod="NO" pv="-6:6" va="0.0" fn="Eta Middle" tip="Central &eta; value for &eta; Cut"/>
+				<SFLOAT u="0" sn="Cut &eta;" ul="0" scope="" isMod="NO" pv="0:6" st="OFF" va="1.0" fn="CutEta" tip="&delta;&eta; for &eta; Cut"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="ByList" tip="Draw Data in Current List Selection"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Summary" tip="Print Summary Of Cuts"/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Inner Detector" name="InDet">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Track" toolTip="Reconstructed Track Collections - Colors and Symbols" name="InDetTrack">
+				<Command command="ZOOMNEXTTRACK" ul="0" name="Zoom Next Track" toolTip="Zoom Next Track"/>
+				<ENUM sn="Track Collections" scope="" ul="0" pv="None=0" va="0" fn="InDetTrack Collections" tip="Select collection of Reconstructed Track to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Pt = 2, Collection = 3, Simulated Track = 4, RecVertex = 5, Objects = 7" va="3" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="25" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Colour for shared objects in associations"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Helix=0,Polyline=1,Smooth curve=2" va="2" fn="Drawn As" tip="Draw Tracks either as Helices or Polylines (always Drawn as Helices in &phi;&eta; Projection)"/>
+				<SINT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0" fn="Next Track" tip="Select a Single Track by the Index Number"/>
+				<LINK to="RTr.d0Sign"/>
+				<LINK to="RTr.RadiusTr"/>
+				<LINK to="RTr.LineTr"/>
+				<LINK to="RTr.ZTr"/>
+				<LINK to="RTr.CallDepth"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Segment" toolTip="Reconstructed InDet Segment Collections - Colors and Symbols" name="InDetSegment">
+				<ENUM sn="Segment Collections" scope="" ul="0" pv="None=0" va="0" fn="InDet Segment Collections" tip="Select collection of Reconstructed Segment to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="100.0" fn="Segment Length" tip="Length of the Segments Drawn"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SpacePoint" toolTip="Silicon 3D SpacePoints - Colors and Symbols" name="S3D">
+				<ENUM sn="SpacePoint Collections" scope="" ul="0" pv="None=0" va="0" fn="S3D Collections" tip="Select collection of SpacePoints to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Group = 4, Layer = 5" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="14" fn="Ungrouped" tip="Color for Ungrouped"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="1" fn="Symbol Size" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" va="0" fn="Symbol" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="2" fn="Noise Size" tip="Noise Symbol Size"/>
+				<SENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" st="OFF" va="3" fn="Noise" tip="Noise Symbol"/>
+				<SLINT u="0" sn="" ul="3" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Frame Width"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="PixelCluster" toolTip="Pixel Cluster - Colors and Symbols" name="PixelCluster">
+				<ENUM sn="PixelCluster Collections" scope="" ul="0" pv="None=0" va="0" fn="PixelCluster Collections" tip="Select collection of Pixel clusters to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4, Orientation=5, dE/dx=6" va="2" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="2" fn="Noise Size" tip="Noise Symbol Size"/>
+				<SENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" st="OFF" va="3" fn="Noise" tip="Noise Symbol"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="3" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="1" st="ON" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+				<SENUM sn="" scope="" ul="1" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" va="0" fn="Stereo" tip="Stereo Angle of Strips"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SCT_Cluster" toolTip="Silicon Cluster - Colors and Symbols" name="SiCluster">
+				<ENUM sn="SCT_Cluster Collections" scope="" ul="0" pv="None=0" va="0" fn="SiCluster Collections" tip="Select collection of Silicon clusters to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4, Orientation=5" va="2" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="2" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+				<SENUM sn="" scope="" ul="1" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" va="0" fn="Stereo" tip="Stereo Angle of Strips"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="TrigSiSpacePoint" toolTip="Online Silicon 3D Space Points - Colors and Symbols" name="TrigS3D">
+				<ENUM sn="TrigSpacePoint Collections" scope="" ul="0" pv="None=0" va="0" fn="TrigS3D Collections" tip="Select collection of Trigger SpacePoints to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Layer = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="14" fn="Ungrouped" tip="Color for Ungrouped"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="3" fn="Symbol Size" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" va="0" fn="Symbol" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="2" fn="Noise Size" tip="Noise Symbol Size"/>
+				<SENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" st="OFF" va="3" fn="Noise" tip="Noise Symbol"/>
+				<SLINT u="0" sn="" ul="3" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Frame Width"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="PixelRDO" toolTip="Pixel Raw Data Object - Colors and Symbols" name="PixelRDO">
+				<ENUM sn="Pixel Raw Data Collections" scope="" ul="0" pv="None=0" va="0" fn="PixelRDO Collections" tip="Select collection of Pixel Raw Data Objects to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="3" fn="Symbol Size" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" va="0" fn="Symbol" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:8" va="2" fn="Noise Size" tip="Noise Symbol Size"/>
+				<SENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" st="OFF" va="3" fn="Noise" tip="Noise Symbol"/>
+				<SLINT u="0" sn="" ul="3" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Frame Width"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SiClusterRDO" toolTip="Silicon Cluster Raw Data Object - Colors and Symbols" name="SiClusterRDO">
+				<ENUM sn="SiClusterRDO Collections" scope="" ul="0" pv="None=0" va="0" fn="SiClusterRDO Collections" tip="Select collection of Silicon Cluster RDOs to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Error = 1, Orientation = 2" va="1" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="20" fn="Error" tip="Color when Color Function is Error"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="3" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="2" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+				<SENUM sn="" scope="" ul="1" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" va="0" fn="Stereo" tip="Stereo Angle of Strips"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="TRT DriftCircle" toolTip="TRT Drift Circle Hits- Colors and Symbols" name="TRT">
+				<ENUM sn="TRT DriftCircle Collections" scope="" ul="0" pv="None=0" va="0" fn="TRT Collections" tip="Select collection of TRT drift circles to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4, isOutlier = 5, driftSign = 6, threshold = 7" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="3" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="2" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SimChargedTrack" toolTip="Simulated Tracks (Charged Truth) - Colors and Symbols" name="STr">
+				<Command command="ZOOMNEXTSTR" ul="0" name="Zoom Next Track" toolTip="Zoom Next Simulated Track"/>
+				<ENUM sn="SimChargedTrack Collections" scope="" ul="0" pv="None=0" va="0" fn="STr Collections" tip="Select collection of Simulated tracks to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Pt = 2, Particle Type = 3, Origin Vertex = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SINT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0" fn="Next Track" tip="Select a Single Simulated Track by the Index Number"/>
+				<LINK to="RTr.d0Sign"/>
+				<LINK to="RTr.RadiusTr"/>
+				<LINK to="RTr.LineTr"/>
+				<LINK to="RTr.ZTr"/>
+				<LINK to="RTr.CallDepth"/>
+			</Group>
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Reconstructed Tracks - Colors and Symbols" name="RTr">
+				<ENUM sn="Reco Track Collections" scope="" ul="0" pv="None=0" va="0" fn="RTr Collections" tip="Select collection of reconstructed tracks to draw"/>
+				<ENUM sn="" scope="" ul="1" pv="ch=0,-ch=1,+=2,-=3" va="0" fn="d0 Sign" tip="Sign Convention for d0"/>
+				<FLOAT u="1" sn="&rho; Track as Helix" ul="0" scope="" isMod="NO" pv="0:inf" va="108.0" fn="Radius Tr" tip="Maximal &rho; to which Tracks are Drawn as Helices"/>
+				<FLOAT u="1" sn="&rho; Track linearly" ul="0" scope="" isMod="NO" pv="0:inf" va="0.0" fn="Line Tr" tip="&rho; to which Tracks are Drawn as Lines beyond the region in which Tracks are Drawn as Helices"/>
+				<FLOAT u="1" sn="Z Track" ul="0" scope="" isMod="NO" pv="0:inf" va="338.0" fn="Z Tr" tip="Absolute Maximal Z to which Tracks are Drawn"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="2:15" va="10" fn="Call Depth" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SimVertex" toolTip="Simulated Vertices (Truth Vertex) - Colors and Symbols" name="SVx">
+				<ENUM sn="SimVertex Collections" scope="" ul="0" pv="None=0" va="0" fn="SVx Collections" tip="Select collection of Simulated Vertices to draw"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" va="0" fn="Symbol" tip="Symbol Type"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="5" fn="Symbol Size" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="2" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="RecVertex" toolTip="Reconstructed Vertices - Colors and Symbols" name="RVx">
+				<ENUM sn="RecoVertex Collections" scope="" ul="0" pv="None=0" va="0" fn="RVx Collections" tip="Select collection of Reconstructed Vertices to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="24" fn="Constant" tip="Color when Color Function is Constant"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="3" fn="Symbol Size" tip=""/>
+				<FLOAT u="0" sn="&sigma;" ul="0" scope="" isMod="NO" pv="0:inf" va="100.0" fn="Num Sigma" tip="Standard Deviation"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Hit Filter" toolTip="Hit Filter Setup" name="Fil">
+				<Command command="FH" ul="0" name="Run Filter" toolTip="Run the Filter"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:7" va="5" fn="Num Hits" tip="Minimal Hits Required in a Bin to Pass Filter"/>
+				<INT u="0" sn="Num &phi;" ul="0" scope="" isMod="NO" pv="360:2160" va="1800" fn="Num Phi" tip="Number of &phi; Filter Bins"/>
+				<INT u="0" sn="Num &eta;" ul="0" scope="" isMod="NO" pv="100:3000" va="1500" fn="Num Eta" tip="Number of &eta; Filter Bins"/>
+				<FLOAT u="0" sn="&eta; Range" ul="0" scope="" isMod="NO" pv="0:inf" va="3.0" fn="Eta Range" tip="&eta; Range"/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Loop" tip="Run Filter Loop"/>
+				<INT u="0" sn="Num Steps" ul="0" scope="" isMod="NO" pv="0:50" va="11" fn="Num Skew" tip="Number of Steps in Filter Loop"/>
+				<FLOAT u="0" sn="Pt Min" ul="0" scope="" isMod="NO" pv="0.5:20.0" va="1.0" fn="Skew Step" tip="Minimal Pt"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Drawing Order" toolTip="Sequence in which the inner detector data (hits and tracks) are drawn on the canvas" name="InDetDrawingOrder">
+				<ENUM sn="Track-SpacePoint Order" scope="" ul="0" pv="SimTrack Track SpacePoint=0,SimTrack SpacePoint Track=1,Track SpacePoint SimTrack=2" va="0" fn="SpacePoints Tracks" tip="Select the Order for Drawing Tracks and Hits (last is drawn on top)"/>
+				<ENUM sn="SpacePoint Order" scope="" ul="0" pv="SpacePoint TrigSiSpacePoint=0,TrigSiSpacePoint SpacePoint=1" va="0" fn="SpacePoints" tip="Select the Order for Drawing Space Points (last is drawn on top)"/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Calorimeter" name="Calo">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Cluster Collections - Colors and Symbols" name="Cluster">
+				<ENUM sn="Cluster Collections" scope="" ul="0" pv="None=0" va="0" fn="Cluster Collections" tip="Select collection of Calorimeter clusters to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Objects = 2" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="14" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="3" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Liquid Argon Calorimeter - Colors and Symbols" name="LAr">
+				<ENUM sn="LAr Collections" scope="" ul="0" pv="None=0" va="0" fn="LAr Collections" tip="Select collection of Liquid Argon Cells to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, SubDetector = 1, Cluster = 2, Layer = 3, Energy = 4, Jet = 5, ECAL/HCAL = 6, Time = 7" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5" va="1" fn="Energy Mode" tip="Scale Mode by Energy"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="8" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Overall = 0, By Energy Type = 1, By Calorimeter = 2" va="0" fn="Energy Calibration" tip=""/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Area/Energy" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Cell Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Cells" tip="Draw Cells"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="17" fn="Histogram" tip="Histogram Color"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8:14" st="ON" va="11" fn="Histo Frame" tip="Histogram Frame Color"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1.0" fn="Histo Scale" tip="Scale Factor of Histogram"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Tile Calorimeter - Colors and Symbols" name="TILE">
+				<ENUM sn="Tile Collections" scope="" ul="0" pv="None=0" va="0" fn="TILE Collections" tip="Select collection of Tile Cells to draw"/>
+				<LINK to="LAr.ColorFunction"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5" va="1" fn="Energy Mode" tip="Scale Mode by Energy"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="8" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<LINK to="LAr.EnergyCalibration"/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Area/Energy" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Cell Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Cells" tip="Draw Cells"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="15" fn="Histogram" tip="Histogram Color"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8:14" st="ON" va="9" fn="Histo Frame" tip="Histogram Frame Color"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="On Top Histo Frame" tip="Draw Histogram Frame on Top"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1.0" fn="Histo Scale" tip="Scale Factor of Histogram"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Hadronic End Cap - Colors and Symbols" name="HEC">
+				<ENUM sn="HEC Collections" scope="" ul="0" pv="None=0" va="0" fn="HEC Collections" tip="Select collection of Hadronic End Cap Cells to draw"/>
+				<LINK to="LAr.ColorFunction"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5" va="1" fn="Energy Mode" tip="Scale Mode by Energy"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="8" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<LINK to="LAr.EnergyCalibration"/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Area/Energy" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Cell Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Cells" tip="Draw Cells"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="15" fn="Histogram" tip="Histogram Color"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8:14" st="ON" va="9" fn="Histo Frame" tip="Histogram Frame Color"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="On Top Histo Frame" tip="Draw Histogram Frame on Top"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1.0" fn="Histo Scale" tip="Scale Factor of Histogram"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Forward Calorimeter - Colors and Symbols" name="FCAL">
+				<ENUM sn="FCal Collections" scope="" ul="0" pv="None=0" va="0" fn="FCAL Collections" tip="Select collection of Forward Calormeter Cells to draw"/>
+				<LINK to="LAr.ColorFunction"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5" va="1" fn="Energy Mode" tip="Scale Mode by Energy"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="8" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<LINK to="LAr.EnergyCalibration"/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Area/Energy" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Cell Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Cells" tip="Draw Cells"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8,14:28" st="OFF" va="23" fn="Histogram" tip="Histogram Color"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0,8:14" st="ON" va="26" fn="Histo Frame" tip="Histogram Frame Color"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="1.0" fn="Histo Scale" tip="Scale Factor of Histogram"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Minimum Bias Trigger Scintillator - Colors and Symbols" name="MBTS">
+				<ENUM sn="MBTS Collections" scope="" ul="0" pv="None=0" va="0" fn="MBTS Collections" tip="Select collection of Minimum Bias Trigger Scinitilator Cells to draw"/>
+				<LINK to="LAr.ColorFunction"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="Sum (Linear) = 0, Max (Linear) = 1, Sum (Logarithmic) = 2, Max (Logarithmic) = 3, Sum (Square Root) = 4, Max (Square Root) = 5" va="1" fn="Energy Mode" tip="Scale Mode by Energy"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unclustered"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="8" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<LINK to="LAr.EnergyCalibration"/>
+				<SFLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:inf" st="OFF" va="0.0" fn="Area/Energy" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Cell Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<STATUS sn="" ul="1" st="ON" scope="" fn="Cells" tip="Draw Cells"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8,14:28" st="OFF" va="15" fn="Histogram" tip="Histogram Color"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="9" fn="Histo Frame" tip="Histogram Frame Color"/>
+				<STATUS sn="" ul="1" st="OFF" scope="" fn="On Top Histo Frame" tip="Draw Histogram Frame on Top"/>
+				<FLOAT u="0" sn="" ul="1" scope="" isMod="NO" pv="0:inf" va="1.0" fn="Histo Scale" tip="Scale Factor of Histogram"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SimNeutralTrack" toolTip="Simulated Neutral Particles in Calorimeter (Neutral Truth) - Colors and Symbols" name="SNP">
+				<ENUM sn="SimNeutralTrack Collections" scope="" ul="0" pv="None=0" va="0" fn="SNP Collections" tip="Select collection of Simulated Neutral Tracks to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Pt = 2, Particle Type = 3, Origin Vertex = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<ENUM sn="Symbol in &phi;&eta;" scope="" ul="0" pv="Filled Square=0, Horizontal Line=1,Vertical Line=2,Plus=3" va="0" fn="Symbol" tip="Symbol Type for Simulated Neutral Tracks in &phi;&eta; Projection"/>
+				<LINT sn="Symbol Size in &phi;&eta;" u="0" scope="" ul="0" pv="1:8" va="4" fn="Symbol Size" tip="Symbol Size for Simulated Neutral Tracks in &phi;&eta; Projection"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Electromagnetic/Tau Region of Interest - Colors and Symbols" name="EmTauROI">
+				<ENUM sn="EmTauROI Collections" scope="" ul="0" pv="None=0" va="0" fn="EmTauROI Collections" tip="Select collection of Electromagnetic/Tau Regions of Intersts to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<FLOAT u="0" sn="&delta;&eta;" ul="0" scope="" isMod="NO" pv="-6:6" va="0.2" fn="deta" tip=""/>
+				<FLOAT u="0" sn="&delta;&phi;" ul="0" scope="" isMod="NO" pv="0:6.28" va="0.2" fn="dphi" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Jet Region of Interest - Colors and Symbols" name="JetROI">
+				<ENUM sn="JetROI Collections" scope="" ul="0" pv="None=0" va="0" fn="JetROI Collections" tip="Select collection of Jet Regions of Interest to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="0" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<FLOAT u="0" sn="&delta;&eta;" ul="0" scope="" isMod="NO" pv="-6:6" va="0.4" fn="deta" tip=""/>
+				<FLOAT u="0" sn="&delta;&phi;" ul="0" scope="" isMod="NO" pv="0:6.28" va="0.4" fn="dphi" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Level-1 Calorimeter Trigger Input Data: e/gamma, tau/had - Colors and Symbols" name="LVL1TriggerTower">
+				<ENUM sn="LVL1TriggerTower Collections" scope="" ul="0" pv="None=0" va="0" fn="LVL1TriggerTower Collections" tip="Select collection of Level-1 Trigger Towers to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, ECAL/HCAL = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="5" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="ECAL = 0, HCAL = 1, Both = 2" va="2" fn="Energy Type" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Level-1 Calorimeter Trigger Input Data: jet, ET-Miss/ET-Sum - Colors and Symbols" name="LVL1JetElement">
+				<ENUM sn="LVL1JetElement Collections" scope="" ul="0" pv="None=0" va="0" fn="LVL1JetElement Collections" tip="Select collection of Level-1 Trigger inputs to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="5" fn="Cell Geometry" tip=""/>
+				<SCOLOR sn="" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Cell Outline" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Level-1 Result Collections" name="LVL1Result">
+				<ENUM sn="LVL1Result Collections" scope="" ul="0" pv="None=0" va="0" fn="LVL1Result Collections" tip="Select collection of LVL1Result to display"/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Muon Detector" name="MuonDet">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Track" toolTip="Reconstructed Track Collections - Colors and Symbols" name="MuonTrack">
+				<ENUM sn="Track Collections" scope="" ul="0" pv="None=0" va="0" fn="MuonTrack Collections" tip="Select collection of Reconstructed Muon Track to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Pt = 2, Collection = 3, Simulated Track = 4, RecVertex = 5, Objects = 7" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="22" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="12" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Colour for shared objects in associations"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<ENUM sn="" scope="" ul="0" pv="Polyline=1,Smooth curve=2" va="1" fn="Drawn As" tip="Draw Tracks either as Polylines or Smooth Curves (always Drawn as Helices in &phi;&eta; Projection)"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Segment" toolTip="Reconstructed InDet Segment Collections - Colors and Symbols" name="MuonSegment">
+				<ENUM sn="Segment Collections" scope="" ul="0" pv="None=0" va="0" fn="Muon Segment Collections" tip="Select collection of Reconstructed Segment to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="14" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="0:inf" va="100.0" fn="Segment Length" tip="Length of the Segments Drawn"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Monitored Drift Tube Chambers - Colors and Symbols" name="MDT">
+				<ENUM sn="MDT Collections" scope="" ul="0" pv="None=0" va="0" fn="MDT Collections" tip="Select collection of Muon Drift Tube hits to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="23" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<ENUM sn="" scope="" ul="0" pv="Circle = 0, Line = 1" va="0" fn="Mode" tip="Draw as Circle or Line"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="4" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Cathode Strip Chambers - Colors and Symbols" name="CSC">
+				<ENUM sn="Cluster Collections" scope="" ul="0" pv="None=0" va="0" fn="CSC Collections" tip="Select collection of Cathode Strip Chambers clusters to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="19" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="19" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="20" fn="Strip" tip="Strip Color"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="5" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="1" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="" name="CSCD">
+				<ENUM sn="Strip Collections" scope="" ul="0" pv="None=0" va="0" fn="CSCD Collections" tip="Select collection of Cathode Strip Chambers hits to draw"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Resistive Plate Chamber Collections - Colors and Symbols" name="RPC">
+				<ENUM sn="RPC Collections" scope="" ul="0" pv="None=0" va="0" fn="RPC Collections" tip="Select collection of Resistive Plate Chamber hits to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="20" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="5" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Thin Gap Chambers - Colors and Symbols" name="TGC">
+				<ENUM sn="TGC Collections" scope="" ul="0" pv="None=0" va="0" fn="TGC Collections" tip="Select collection of Thin Gap Chamber hits to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Simulated Track = 1, Reconstructed Track = 2, SubDetector = 3, Track Segment = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="21" fn="Unconnected" tip="Color for Unassociated"/>
+				<COLOR sn="" scope="" ul="0" pv="0,8,14:28" va="0" fn="Shared" tip="Color for Shared"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<SLINT u="0" sn="" ul="0" scope="" pv="1:5" st="OFF" va="1" fn="Noise Width" tip="Noise Line Width"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="0:8" va="5" fn="Symbol Size" tip=""/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="Force Symbols" tip="Display using Symbols"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="SimMuonTrack" toolTip="Simulated Muon Tracks - Colors and Symbols" name="SMTr">
+				<ENUM sn="SMTr Collections" scope="" ul="0" pv="None=0" va="0" fn="SMTr Collections" tip="Select collection of Simulated Muon tracks to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Pt = 2, Particle Type = 3, Origin Vertex = 4" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<LINK to="RTr.d0Sign"/>
+				<LINK to="RTr.RadiusTr"/>
+				<LINK to="RTr.LineTr"/>
+				<LINK to="RTr.ZTr"/>
+				<LINK to="RTr.CallDepth"/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Muon Region-of-Interest (ROI) - Colors and Symbols" name="MuonROI">
+				<ENUM sn="MuonROI Collections" scope="" ul="0" pv="None=0" va="0" fn="MuonROI Collections" tip="Select collection of Muon Region-of-Interest (ROI) to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="2" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="OFF" va="8" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+				<FLOAT u="0" sn="&delta;&eta;" ul="0" scope="" isMod="NO" pv="-6:6" va="0.1" fn="deta" tip=""/>
+				<FLOAT u="0" sn="&delta;&phi;" ul="0" scope="" isMod="NO" pv="0:6.28" va="0.1" fn="dphi" tip=""/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="Physics Objects and Analysis Object Data" name="Objects">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Jet Collections - Colors and Symbols" name="Jet">
+				<ENUM sn="Jet Collections" scope="" ul="0" pv="None=0" va="0" fn="Jet Collections" tip="Select collection of Jet to draw"/>
+				<ENUM fn="Color Function" sn="" scope="" ul="0" va="0" pv="&colorFnBasicCollectionBJets;"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="8" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0.0:1000.0" va="1.0" fn="Scale" tip=""/>
+                <ENUM   fn="Scale Type" va="0" pv="length=0,area=1" tip="Scale Type"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="0:1000" va="0.0" fn="Inner draw radius" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Missing ET Collections - Colors and Symbols" name="ETMis">
+				<ENUM sn="ETMis Collections" scope="" ul="0" pv="None=0" va="0" fn="ETMis Collections" tip="Select collection of ET Missing to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1, Collection = 2" va="2" fn="Color Function" tip=""/>
+				<ENUM sn="Draw as" scope="" ul="0" pv="Arrow = 0, Dashed Line = 1" va="0" fn="Draw as" tip="Choose how to draw the Missing ET"/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="14" fn="Constant" tip="Color when Color Function is Constant"/>
+				<ENUM sn="" scope="" ul="0" pv="ET=0, 1=1, 2=2, 3=3, 4=4, 5=5" va="2" fn="Line Width" tip="Set the line width by choosing a value or by scaling with ET"/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="B-tagged Jet - Colors and Symbols" name="BJet">
+				<ENUM sn="BJet Collections" scope="" ul="0" pv="None=0" va="0" fn="BJet Collections" tip="Select collection of BJet to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="22" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Electron - Colors and Symbols" name="Electron">
+				<ENUM sn="" scope="" ul="0" pv="None=0" va="0" fn="Electron Collections" tip="Select the collection of Electron to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="21" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Muon - Colors and Symbols" name="Muon">
+				<ENUM sn="" scope="" ul="0" pv="None=0" va="0" fn="Muon Collections" tip="Select collection of Muon to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="20" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Photon - Colors and Symbols" name="Photon">
+				<ENUM sn="" scope="" ul="0" pv="None=0" va="0" fn="Photon Collections" tip="Select collection of Photon to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="23" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="" toolTip="Tau - Colors and Symbols" name="TauJet">
+				<ENUM sn="" scope="" ul="0" pv="None=0" va="0" fn="TauJet Collections" tip="Select collection of TauJet to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="28" fn="Constant" tip="Color when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Comp.Part." toolTip="CompositeParticle - Colors and Symbols" name="CompositeParticle">
+				<ENUM sn="" scope="" ul="0" pv="None=0" va="0" fn="CompositeParticle Collections" tip="Select collection of CompositeParticle to draw"/>
+				<ENUM sn="" scope="" ul="0" pv="Constant = 0, Index = 1" va="0" fn="Color Function" tip=""/>
+				<COLOR sn="Constant Color" scope="" ul="0" pv="0,8,14:28" va="27" fn="Constant" tip="Color when Color Function is Constant"/>
+				<COLOR sn="Constant Color (W)" scope="" ul="0" pv="0,8,14:28" va="24" fn="ConstantW" tip="Color of W when Color Function is Constant"/>
+				<COLOR sn="Constant Color (Higgs)" scope="" ul="0" pv="0,8,14:28" va="15" fn="ConstantH" tip="Color of Higgs when Color Function is Constant"/>
+				<COLOR sn="Constant Color (top)" scope="" ul="0" pv="0,8,14:28" va="17" fn="ConstantTop" tip="Color of top when Color Function is Constant"/>
+				<LINT sn="" u="0" scope="" ul="0" pv="1:5" va="1" fn="Line Width" tip=""/>
+				<SCOLOR sn="" scope="" ul="1" pv="0,8:14" st="ON" va="14" fn="Frame" tip="Frame Color"/>
+				<LINT sn="" u="0" scope="" ul="1" pv="1:5" va="1" fn="Frame Width" tip=""/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="0" toolTip="ATLAS Geometry settings (colors, etc)" name="Geometry">
+			<Group userLevel="0" guiUsage="TABLE" scope="GLOBAL" sname="Geo" toolTip="Colors of detectors geometry" name="Det">
+				<SCOLOR sn="Pixel color" scope="" ul="0" pv="0:8,14" st="ON" va="1" fn="PIX Fill" tip="Pixel fill color"/>
+				<SCOLOR sn="SCT color" scope="" ul="0" pv="0:8,14" st="ON" va="2" fn="SIL Fill" tip="Semiconducting Tracker fill color"/>
+				<SCOLOR sn="TRT color" scope="" ul="0" pv="0:8,14" st="ON" va="1" fn="TRT Fill" tip="Transition Radiation Tracker fill color"/>
+				<SCOLOR sn="Solenoid color" scope="" ul="0" pv="0:8,14" st="ON" va="7" fn="Sol Fill" tip="Solenoid fill color"/>
+				<SCOLOR sn="LAr calorimeter color" scope="" ul="0" pv="0:8,14" st="ON" va="5" fn="ECAL Fill" tip="Electromagmetic calorimeter (LAr) fill color"/>
+				<SCOLOR sn="Tile calorimeter color" scope="" ul="0" pv="0:8,14" st="ON" va="3" fn="HCAL Fill" tip="Hadronic calorimeter (Tile) fill color"/>
+				<SCOLOR sn="RPC color" scope="" ul="0" pv="0:8,14" st="ON" va="4" fn="RPC Fill" tip="Resistive Plate Chamber fill color"/>
+				<SCOLOR sn="TGC color" scope="" ul="0" pv="0:8,14" st="ON" va="4" fn="TGC Fill" tip="Thin Gap Chambers fill color"/>
+				<SCOLOR sn="MDT color" scope="" ul="0" pv="0:8,14" st="ON" va="6" fn="MDT Fill" tip="Monitored Drift Tube chambers fill color"/>
+				<SCOLOR sn="CSC color" scope="" ul="0" pv="0:8,14" st="ON" va="6" fn="CSC Fill" tip="Cathod Strip Chambers fill color"/>
+				<COLOR sn="Background color" scope="" ul="0" pv="0:8,14,26" va="8" fn="Bkg Fill" tip="Background fill color"/>
+				<FLOAT sn="Alpha for Jet Transparent Cones" fn="Alpha" scope="" ul="0" pv="0.0:1.0" va="0.35" tip="Alpha of transparent objects such as jets"/>
+				<FLOAT sn="Alpha for Jet Transparent Towers" fn="AlphaJets" scope="" ul="0" pv="0.0:1.0" va="0.15" tip="Alpha of transparent objects such as jets"/>			
+				<SCOLOR sn="Pixel/SCT geometry detail" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Silicon Detail" tip="Pixel/SCT detailed geometry structure"/>
+				<SCOLOR sn="TRT geometry detail" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="TRT Detail" tip="TRT detailed geometry structure"/>
+				<SCOLOR sn="Calorimetry cell structure" scope="" ul="0" pv="0:8,14" st="OFF" va="14" fn="Calo Detail" tip="Detailed structure of calorimeter cells"/>
+				<STATUS sn="Show detectors" ul="0" st="ON" scope="" fn="Detectors" tip=""/>
+				<STATUS sn="Show detectors outline" ul="0" st="OFF" scope="" fn="Hide Detectors" tip="Hide the detectors colour but leave their outline"/>
+			</Group>
+		</SuperGroup>
+		<SuperGroup userLevel="1" toolTip="Internal" name="Internal">
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Color Priority by Hue Difference" name="HitColors">
+				<INT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="7" fn="Number" tip="Number of Colors used"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="20" fn="C1" tip="color 1"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="21" fn="C2" tip="color 2"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="28" fn="C3" tip="color 3"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="27" fn="C4" tip="color 4"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="25" fn="C5" tip="color 5"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="24" fn="C6" tip="color 6"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="23" fn="C7" tip="color 7"/>
+			</Group>
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Color Priority by Hue Difference" name="ParticleColors">
+				<INT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="7" fn="Number" tip="Number of Colors used"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="28" fn="C1" tip="color 1"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="25" fn="C2" tip="color 2"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="23" fn="C3" tip="color 3"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="21" fn="C4" tip="color 4"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="24" fn="C5" tip="color 5"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="20" fn="C6" tip="color 6"/>
+				<COLOR sn="" scope="" ul="0" pv="-inf : inf" va="27" fn="C7" tip="color 7"/>
+			</Group>
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Event" name="Event">
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="Restore Defaults" tip="Restore defaults each event"/>
+				<ENUM sn="" scope="" ul="3" pv="Event Data=0, Detectors=1" va="0" fn="Picking Mode" tip=""/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="-5.179999861866236E-4" fn="XVtx" tip="X of Primary Vertex"/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="-9.519999730400741E-4" fn="YVtx" tip="Y of Primary Vertex"/>
+				<FLOAT u="1" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="1.3436609506607056" fn="ZVtx" tip="Z of Primary Vertex"/>
+				<FLOAT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="166.6666667" fn="Curvature" tip="Magnetic field parameter"/>
+			</Group>
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Preferences menu items" name="Prefs">
+				<STATUS sn="" ul="0" st="ON" scope="" fn="CanvasTitle" tip="Display Canvas title"/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="WindowTitle" tip="Display Window titles"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="HideScales" tip="Hide all scales"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="FisheyeIndicator" tip="Display Fisheye indicator"/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="AtlasLogo" tip="Show ATLAS logo on saved images"/>
+				<STATUS sn="" ul="0" st="ON" scope="" fn="AntiAlias" tip="Turn on/off antialiasing"/>
+				<STATUS sn="" ul="1" st="OFF" scope="" fn="OpenGL" tip="Turn on/off openGL displays"/>
+				<INT u="0" sn="" ul="0" scope="" isMod="NO" pv="-inf : inf" va="2" fn="ColorMap" tip="startup colorMap"/>
+			</Group>
+			<Group userLevel="0" guiUsage="NO_USE" scope="GLOBAL" sname="" toolTip="Minerva options" name="Minerva">
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="hide run" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="hide ev" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="hide geometry" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="simple output" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="alternative simple output" tip=""/>
+				<STATUS sn="" ul="0" st="OFF" scope="" fn="hide V0 mass output" tip=""/>
+			</Group>
+		</SuperGroup>
+	</Parameters>
+
+	<ParameterDifferences>
+		<DIFFERENCE windowName="1" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="2" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="3" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="4" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="5" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="6" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="7" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="8" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="9" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="L" st="" va="5.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="M" st="" va="8.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="U" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="C" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="D" st="" va="8.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="S" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="W" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="B" st="" va="0.0" op="" group="YX" name="Mode"/>
+		<DIFFERENCE windowName="1" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="2" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="3" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="4" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="5" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="6" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="7" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="8" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="9" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="U" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="C" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="D" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="S" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="W" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="B" st="ON" va="" op="" group="YX" name="FishEye"/>
+		<DIFFERENCE windowName="D" st="ON" va="" op="" group="LegoPlot" name="L1Items"/>
+		<DIFFERENCE windowName="D" st="ON" va="" op="" group="LegoPlot" name="L2Items"/>
+		<DIFFERENCE windowName="D" st="ON" va="" op="" group="LegoPlot" name="EFItems"/>
+	</ParameterDifferences>
+	<WindowCorners>
+		<CORNERS windowName="W" y0="1320.0" y1="1320.0" y2="-1320.0" x2="1320.0" x0="-1320.0" x1="1320.0"/>
+		<CORNERS windowName="S" y0="1320.0" y1="1320.0" y2="-1320.0" x2="1320.0" x0="-1320.0" x1="1320.0"/>
+		<CORNERS windowName="R" y0="1677.7804202180123" y1="1677.7804202180123" y2="-1677.7804202180123" x2="1254.8878211493632" x0="-1254.8878211493632" x1="1254.8878211493632"/>
+		<CORNERS windowName="M" y0="1797.1732184636535" y1="1797.1732184636535" y2="-1797.1732184636535" x2="1344.1870921659654" x0="-1344.1870921659654" x1="1344.1870921659654"/>
+		<CORNERS windowName="L" y0="941.028148702736" y1="941.028148702736" y2="-941.028148702736" x2="703.8374920434165" x0="-703.8374920434165" x1="703.8374920434165"/>
+		<CORNERS windowName="D" y0="-30.0" y1="-30.0" y2="8.0" x2="385.0" x0="-241.0" x1="385.0"/>
+		<CORNERS windowName="B" y0="1266.2032636518709" y1="1266.2032636518709" y2="-1266.2032636518709" x2="2252.2543938499775" x0="-2252.2543938499775" x1="2252.2543938499775"/>
+	</WindowCorners>
+</AtlantisConfiguration>

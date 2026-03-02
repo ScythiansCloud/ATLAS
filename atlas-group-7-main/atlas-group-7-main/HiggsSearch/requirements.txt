@@ -1,0 +1,9 @@
+atlasify==0.4.2
+pandas==1.2.0
+pylorentz==0.3.3
+uproot==4.0.6
+matplotlib==3.3.3
+ipywidgets==7.6.3
+scipy==1.6.0
+awkward==1.1.2
+numba==0.53.1

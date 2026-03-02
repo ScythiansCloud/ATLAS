@@ -1,0 +1,1309 @@
+<?xml version="1.0"?>
+<!DOCTYPE AtlantisConfiguration SYSTEM "config.dtd">
+<AtlantisConfiguration>
+    <Initialization>
+        <Interactions>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="YES" projectionName="YX">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="RubberbandYX" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="Clock" screenName="Clock" toolTip="Clock Transformation"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="YES" projectionName="RZ">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="Rubberband" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="Skew" screenName="Skew" toolTip="Skew Interaction"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="XZ">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="Rubberband" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="YZ">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="Rubberband" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="FZ">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="Rubberband" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="Skew" screenName="Skew" toolTip="Skew Interaction"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="FR">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="RubberbandYX" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="Skew" screenName="Skew" toolTip="Skew Interaction"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="YES" projectionName="VP">
+                <Panel fileName="VPSelection" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="NO" defaultInDemoMode="NO" projectionName="3D">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="VPSelection" screenName="RubberBand" toolTip="Rubberband Selection"/>
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                <Panel fileName="FishEye" screenName="FishEye" toolTip="FishEye Transformation"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <Panel fileName="ScaleCopy" screenName="Scale" toolTip="Scale Interaction"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="NO" defaultInDemoMode="NO" projectionName="3DBox">
+                <Panel fileName="3DBox" screenName="ZR" toolTip="Zoom/Rotate"/>
+                <!-- temporarily remove "Pick" interaction for 3DBox until it is implemented
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                -->
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="LegoPlot">
+                <Panel fileName="ZMR" screenName="ZMR" toolTip="Zoom/Move/Rotate"/>
+                <Panel fileName="SynchroCursors" screenName="SyncCursors" toolTip="Synchronised Cursors"/>
+                <!-- temporarily remove "Pick" interaction for Lego until it is implemented
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+                -->
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="NO" defaultInDemoMode="NO" projectionName="TrackResidual">
+                <Panel fileName="Pick" screenName="Pick" toolTip="Show Info for Picked Item"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="N3D">
+                <Panel fileName="NZMR" screenName="Rotate" toolTip="Zoom/Move/Rotate"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="NYX">
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="NPhysics">
+                <Panel fileName="NZMR" screenName="Rotate" toolTip="Zoom/Move/Rotate"/>
+            </InteractionControl>
+            <InteractionControl availableInDemoMode="YES" defaultInDemoMode="NO" projectionName="EventInfo">
+            </InteractionControl>
+        </Interactions>
+        <Canvas aspectRatio="0.9079601990049752" startupLayout="FULL SCREEN">
+            <UsedWindow group="Data" name="1" projection="YX"/>
+            <UsedWindow group="Data" name="2" projection="FR"/>
+            <UsedWindow group="Data" name="3" projection="FZ"/>
+            <UsedWindow group="Data" name="4" projection="YZ"/>
+            <UsedWindow group="Data" name="5" projection="RZ"/>
+            <UsedWindow group="Data" name="6" projection="VP"/>
+            <UsedWindow group="Data" name="7" projection="XZ"/>
+            <UsedWindow group="Data" name="8" projection="VP"/>
+            <UsedWindow group="Data" name="9" projection="LegoPlot"/>
+            <UsedWindow group="YX" name="L" projection="YX"/>
+            <UsedWindow group="InDetTrack" name="M" projection="YX"/>
+            <UsedWindow group="Jet" name="R" projection="YX"/>
+            <UsedWindow group="Data" name="U" projection="YX"/>
+            <UsedWindow group="Data" name="C" projection="FR"/>
+            <UsedWindow group="Det" name="D" projection="LegoPlot"/>
+            <UsedWindow group="Data" name="E" projection="FZ"/>
+            <UsedWindow group="Data" name="S" projection="YX"/>
+            <UsedWindow group="Data" name="W" projection="YX"/>
+            <UsedWindow group="InDetTrack" name="B" projection="RZ"/>
+            <Layout name="LANDSCAPE" startup="S36" startupWindow="S">
+                <Window hPos="0" height="1" name="1" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="2" vPos="0" width="1"/>
+                <Window hPos="2" height="1" name="3" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="4" vPos="1" width="1"/>
+                <Window hPos="1" height="1" name="5" vPos="1" width="1"/>
+                <Window hPos="2" height="1" name="6" vPos="1" width="1"/>
+                <Window hPos="0" height="2" name="L" vPos="0" width="1"/>
+                <Window hPos="1" height="2" name="M" vPos="0" width="1"/>
+                <Window hPos="2" height="2" name="R" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="U" vPos="0" width="2"/>
+                <Window hPos="0" height="1" name="B" vPos="1" width="2"/>
+                <Window hPos="0" height="2" name="S" vPos="0" width="2"/>
+                <Window hPos="0" height="2" name="W" vPos="0" width="3"/>
+                <Page content="123456" name="Full"/>
+                <Page content="LMR" name="Vert"/>
+                <Page content="SR" name="Rect"/>
+                <Page content="UBR" name="Hori"/>
+                <Page content="W" name="W"/>
+            </Layout>
+            <Layout name="PORTRAIT" startup="SB" startupWindow="S">
+                <Window hPos="0" height="1" name="1" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="2" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="3" vPos="1" width="1"/>
+                <Window hPos="1" height="1" name="4" vPos="1" width="1"/>
+                <Window hPos="0" height="1" name="5" vPos="2" width="1"/>
+                <Window hPos="1" height="1" name="6" vPos="2" width="1"/>
+                <Window hPos="0" height="1" name="U" vPos="0" width="2"/>
+                <Window hPos="0" height="1" name="C" vPos="1" width="2"/>
+                <Window hPos="0" height="1" name="B" vPos="2" width="2"/>
+                <Window hPos="0" height="2" name="S" vPos="0" width="2"/>
+                <Window hPos="0" height="3" name="W" vPos="0" width="2"/>
+                <Page content="123456" name="Full"/>
+                <Page content="SB" name="Rect"/>
+                <Page content="UCB" name="Hori"/>
+                <Page content="W" name="W"/>
+            </Layout>
+            <Layout name="SQUARE B" startup="S369" startupWindow="S">
+                <Window hPos="0" height="1" name="1" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="2" vPos="0" width="1"/>
+                <Window hPos="2" height="1" name="3" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="4" vPos="1" width="1"/>
+                <Window hPos="1" height="1" name="5" vPos="1" width="1"/>
+                <Window hPos="2" height="1" name="6" vPos="1" width="1"/>
+                <Window hPos="0" height="1" name="7" vPos="2" width="1"/>
+                <Window hPos="1" height="1" name="8" vPos="2" width="1"/>
+                <Window hPos="2" height="1" name="9" vPos="2" width="1"/>
+                <Window hPos="0" height="3" name="W" vPos="0" width="3"/>
+                <Window hPos="0" height="3" name="S" vPos="0" width="2"/>
+                <Window hPos="0" height="3" name="L" vPos="0" width="1"/>
+                <Window hPos="1" height="3" name="M" vPos="0" width="1"/>
+                <Window hPos="2" height="3" name="R" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="U" vPos="0" width="3"/>
+                <Window hPos="0" height="1" name="C" vPos="1" width="3"/>
+                <Window hPos="0" height="1" name="B" vPos="2" width="3"/>
+                <Page content="123456789" name="Full"/>
+                <Page content="SR" name="Rect"/>
+                <Page content="LMR" name="Hori"/>
+                <Page content="UCB" name="Vert"/>
+                <Page content="W" name="W"/>
+            </Layout>
+            <Layout name="SQUARE" startup="SRB" startupWindow="S">
+                <Window hPos="0" height="1" name="1" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="2" vPos="0" width="1"/>
+                <Window hPos="2" height="1" name="3" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="4" vPos="1" width="1"/>
+                <Window hPos="1" height="1" name="5" vPos="1" width="1"/>
+                <Window hPos="2" height="1" name="6" vPos="1" width="1"/>
+                <Window hPos="0" height="1" name="7" vPos="2" width="1"/>
+                <Window hPos="1" height="1" name="8" vPos="2" width="1"/>
+                <Window hPos="2" height="1" name="9" vPos="2" width="1"/>
+                <Window hPos="0" height="2" name="S" vPos="0" width="2"/>
+                <Window hPos="0" height="2" name="L" vPos="0" width="1"/>
+                <Window hPos="1" height="2" name="M" vPos="0" width="1"/>
+                <Window hPos="2" height="2" name="R" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="U" vPos="0" width="2"/>
+                <Window hPos="0" height="1" name="C" vPos="1" width="2"/>
+                <Window hPos="0" height="1" name="D" vPos="2" width="2"/>
+                <Window hPos="0" height="1" name="B" vPos="2" width="3"/>
+                <Window hPos="0" height="3" name="W" vPos="0" width="3"/>
+                <Page content="123456789" name="Full"/>
+                <Page content="LMRB" name="Hori"/>
+                <Page content="UCD369" name="Vert"/>
+                <Page content="SRB" name="All"/>
+                <Page content="W" name="W"/>
+            </Layout>
+            <Layout name="FOUR SQUARES" startup="1234" startupWindow="1">
+                <Window hPos="0" height="1" name="1" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="2" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="3" vPos="1" width="1"/>
+                <Window hPos="1" height="1" name="4" vPos="1" width="1"/>
+                <Window hPos="0" height="1" name="B" vPos="1" width="2"/>
+                <Window hPos="0" height="2" name="W" vPos="0" width="2"/>
+                <Page content="1234" name="Four"/>
+                <Page content="12B" name="Three"/>
+                <Page content="W" name="W"/>
+            </Layout>
+            <Layout name="FULL SCREEN" startup="DRMLB" startupWindow="B">
+                <Window hPos="0" height="2" name="S" vPos="0" width="2"/>
+                <Window hPos="2" height="1" name="R" vPos="0" width="1"/>
+                <Window hPos="2" height="1" name="D" vPos="1" width="1"/>
+                <Window hPos="2" height="2" name="E" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="L" vPos="0" width="1"/>
+                <Window hPos="1" height="1" name="M" vPos="0" width="1"/>
+                <Window hPos="0" height="1" name="B" vPos="1" width="2"/>
+                <Window hPos="0" height="2" name="W" vPos="0" width="3"/>
+                <Page content="SE" name="Two"/>
+                <Page content="SRD" name="Three"/>
+                <Page content="LMRBD" name="Five"/>
+                <Page content="W" name="W"/>
+            </Layout>
+        </Canvas>
+    </Initialization>
+    <Parameters userLevel="&user;">
+
+        <SuperGroup name="Projection" toolTip="Projection Selection">
+
+            <Group name="Projection" scope="LOCAL" toolTip="Projection Parameters">
+                <FLOAT  fn="Radius" va="1320.0" pv="0:inf" tip="default detector radius" ul="&user;" u="&length;"/>
+                <FLOAT  fn="Length" va="2250.0" pv="0:inf" tip="default detector length" ul="&user;" u="&length;"/>
+                <FLOAT  fn="TrackingRadius" va="1320.0" pv="0:inf" tip="default detector radius" ul="&user;" u="&length;"/>
+                <FLOAT  fn="TrackingLength" va="2250.0" pv="0:inf" tip="default detector length" ul="&user;" u="&length;"/>
+                <FLOAT  fn="Energy Max" va="1000.0" pv="1:inf" ul="&debug;" u="&energy;"/>
+                <STATUS fn="Skip Data" st="OFF" tip="Skip drawing of data during interaction if F key down"/>
+            </Group>
+
+            <Group name="YX" scope="LOCAL" guiUsage="PROJECTION" toolTip="YX Projection">
+                <ENUM   fn="Mode" sn="View" va="0" pv="&modesYX;" ul="&user;" tip="View Mode"/>
+                <ENUM   fn="LArBin" sn="Summed LAr binning" va="1" pv="0.1x0.1=1,0.2x0.2=2,split=3" tip="Shows the binning for the LAr Summed endcap view for &eta; and &phi;" scope="GLOBAL"/>
+                <ENUM   fn="HECBin" sn="Summed HEC binning" va="2" pv="0.1x0.1=1,0.2x0.2=2,split=3" tip="Shows the binning for the HEC Summed endcap view for &eta; and &phi;" scope="GLOBAL"/>
+                <FLOAT  fn="SplitEta" sn="Eta of split binning" va="2.5" pv="0:inf" tip="On summed binning seperates the split binning 0.1x0.1 below eta and 0.2x0.2 above eta, minimum 1.2 and only keeps 1 decimal place"/>
+                <STATUS fn="DrawFCAL" sn="Draw FCAL inside HEC" st="OFF" tip="Draws the FCAL layers inside the relevant individual layers of the HEC (2,3,4)" scope="GLOBAL"/>
+                <SLINT  fn="CSC Gas Gap" va="1" pv="1:4" st="OFF" ul="&user;" tip="Gas Gap in Cathode Strip Chambers"/>
+                <SLINT  fn="TGC Gas Gap" va="1" pv="1:3" st="OFF" ul="&user;" tip="Gas Gap in Thin Gap Chambers"/>
+                <FLOAT  fn="Phi" sn="&phi; for Clock interaction" va="0.0" pv="0:360" tip="&phi; angle for clock zoom interaction (Clock interaction must be activated)" ul="&superuser;"/>
+                <SFLOAT fn="FishEye" va="1.5" pv="0:inf" st="ON" tip="Fish Eye zoom factor value" ul="&debug;"/>
+                <SFLOAT fn="Clock" va="3.0" pv="0:inf" st="OFF" tip="Clock zoom factor value" ul="&debug;"/>
+                <FLOAT  fn="rTo" sn="&rho; To" va="1100.0" pv="0:inf" tip="&rho; value for Fish Eye zoom (interaction)" ul="&debug;" u="&length;"/>
+                <STATUS fn="RZ Cutting Plane" sn="&rho;Z Cutting Plane" st="OFF" tip="Show cutting plane of projection &rho;Z"/>
+            </Group>
+
+            <Group name="VP" sname="&phi;&eta;" scope="LOCAL" guiUsage="PROJECTION" toolTip="&phi;&eta; Projection">
+                <Command name="Set Original Primary Vertex" command="SETORIGINALPRIMARYVERTEX" toolTip="Set original primary vertex of the current event" ul="&user;"/>
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0,SpacePoint=1,TRT_DriftCircle=2,ECAL Sampling 0=3,ECAL Sampling 1=4,ECAL Sampling 2=5,ECAL Sampling 3=6,HCAL Sampling 0=7,HCAL Sampling 1=8,HCAL Sampling 2=9,HCAL Sampling 3=10" tip="View Mode"/>
+                <STATUS fn="Eta Vertex" sn="&eta; Vertex" st="ON" tip="Recalculates &eta; from &rho; and z for calorimeter cells from primary vertex instead of from 0 (shall always be on)"/>
+                <LINK   to="Event.XVtx"/>
+                <LINK   to="Event.YVtx"/>
+                <LINK   to="Event.ZVtx"/>
+                <SFLOAT fn="R Max" sn="&rho; Max" st="OFF" va="122.0" pv="0:inf" tip="Maximal &rho; of Tip of V" u="&length;"/>
+                <SFLOAT fn="Z Max" st="OFF" va="265.0" pv="0:inf" tip="Maximal Z of Tip of V" u="&length;"/>
+                <FLOAT  fn="Gradient" va="5.0" pv="0:inf" tip="Gradient of V Arms"/>
+                <SFLOAT fn="Short V" st="OFF" va="0.4" tip="Draw Short V (only if SpacePoint are turned off)"/>
+                <SCOLOR fn="VPlot Island" sn = "VPlot calo island" va="8" pv="&detectCol;" st="ON" tip="Select the color for islands for calorimeter detail zoom (island is a common structure for all calo layers)"/>
+                <STATUS fn="DrawApex" st="OFF" tip="Draw Symbol at Apex of V"/>
+                <ENUM   fn="Jet" sn="Jet" va="0" pv="ET=0, E=1" tip="Select the Energy Type for Drawing Jets"/>
+                <INT    fn="Initial Frame" va="-1" pv="-inf:inf" ul="&debug;"/>
+                <INT    fn="Frames Count" va="3" pv="0:inf" ul="&debug;"/>
+                <INT    fn="Phi Wrap" sn="&phi; Wrap" va="0" pv="0:inf" ul="&debug;"/>
+            </Group>
+
+            <Group name="RZ" sname="&rho;Z" scope="LOCAL" guiUsage="PROJECTION" toolTip="&rho;Z Projection">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" ul="&debug;"/>
+                <FLOAT  fn="Phi" sn="&phi;" va="90.0" pv="0:360" tip="Cutting Plane Angle" ul="&user;"/>
+                <STATUS fn="TRT" sn="TRT_DriftCircle" st="OFF" tip="Draw TRT_DriftCircle" ul="&user;"/>
+                <SFLOAT fn="FishEye" va="0.0" pv="0:inf" st="OFF" ul="&debug;"/>
+                <FLOAT  fn="rTo" sn="&rho; To" va="1100.0" pv="0:inf" ul="&debug;" u="&length;"/>
+                <FLOAT  fn="zTo" va="2300.0" pv="0:inf" ul="&debug;" u="&length;"/>
+            </Group>
+
+            <Group name="FR" sname="&phi;&rho;" scope="LOCAL" guiUsage="PROJECTION" toolTip="&phi;&rho; Projection">
+                <LINK   to="YX.Mode"/>
+                <LINK   to="YX.LArBin"/>
+                <LINK   to="YX.HECBin"/>
+                <LINK   to="YX.DrawFCAL"/>
+                <LINK   to="YX.SplitEta"/>
+                <LINK   to="YX.CSCGasGap"/>
+                <LINK   to="YX.TGCGasGap"/>
+                <SFLOAT fn="FishEye" va="1.5" pv="0:inf" st="ON" ul="&debug;"/>
+                <SFLOAT  fn="Horizontal Zoom" va="1.1" pv="0:inf" st="ON" tip="Initial Horizontal Zoom Factor" ul="&debug;"/>
+                <FLOAT  fn="rTo" sn="&rho; To" va="1100.0" pv="0:inf"  ul="&debug;" u="&length;"/>
+                <INT    fn="Initial Frame" va="-1" pv="-inf:inf" ul="&debug;"/>
+                <INT    fn="Frames Count" va="3" pv="0:inf" ul="&debug;"/>
+                <INT    fn="Phi Wrap" sn="&phi; Wrap" va="0" pv="0:inf" ul="&debug;"/>
+            </Group>
+
+            <Group name="FZ" sname="&phi;Z" scope="LOCAL" guiUsage="PROJECTION" toolTip="&phi;Z Projection">
+                <ENUM   fn="Mode" sn="View" va="0" pv="&modesFZ;" ul="&user;" tip="View Mode"/>
+                <SLINT  fn="RPC Gas Gap" va="1" pv="1:2" st="OFF" ul="&user;" tip="Gas Gap in Resistive Plate Chamber"/>
+                <SFLOAT fn="FishEye" va="0.0" pv="0:inf" st="OFF" ul="&debug;"/>
+                <FLOAT  fn="zTo" va="2300.0" pv="0:inf" ul="&debug;" u="&length;"/>
+                <INT    fn="Initial Frame" va="-1" pv="-inf:inf" ul="&debug;"/>
+                <INT    fn="Frames Count" va="3" pv="0:inf" ul="&debug;"/>
+                <INT    fn="Phi Wrap" sn="&phi; Wrap" va="0" pv="0:inf" ul="&debug;"/>
+            </Group>
+
+            <Group name="XZ" sname="X&prime;Z" scope="LOCAL" guiUsage="PROJECTION" toolTip="X&prime;Z Projection">
+                <Command name="Prev Sector" command="PREVSECTOR" toolTip="Show Previous MDT Sector" ul="&user;"/>
+                <Command name="Next Sector" command="NEXTSECTOR" toolTip="Show Next MDT Sector" ul="&user;"/>
+                <LINK   to="YZ.Mode"/>
+                <LINK   to="YZ.Phi"/>
+                <LINK   to="YZ.FishEye"/>
+                <LINK   to="YZ.rTo"/>
+                <LINK   to="YZ.zTo"/>
+            </Group>
+
+            <Group name="YZ" sname="Y&prime;Z" scope="LOCAL" guiUsage="PROJECTION" toolTip="Y&prime;Z Projection">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" ul="&debug;"/>
+                <FLOAT  fn="Phi" sn="&phi;" va="0.0" pv="0:360" tip="&phi; of Y&prime; axis" ul="&user;"/>
+                <SFLOAT fn="Fish Eye" va="0.0" pv="0:inf" st="OFF" ul="&debug;"/>
+                <FLOAT  fn="rTo" va="1100.0" pv="0:inf" ul="&debug;" u="&length;"/>
+                <FLOAT  fn="zTo" va="2300.0" pv="0:inf" ul="&debug;" u="&length;"/>
+            </Group>
+
+            <!-- hide 3D projection (by user level debug) -->
+            <Group name="3D" sname="3D" scope="LOCAL" guiUsage="PROJECTION" toolTip="3D Parallel Projection" userLevel="&debug;">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" ul="&debug;"/>
+                <FLOAT  fn="x Axis" va="0.9768" pv="-1.:1.0" tip="x of Rotation Axis"/>
+                <FLOAT  fn="y Axis" va="0.14" pv="-1.:1.0" tip="y of Rotation Axis"/>
+                <FLOAT  fn="z Axis" va="0.1623" pv="-1.:1.0" tip="z of Rotation Axis"/>
+                <FLOAT  fn="Phi" sn="&phi;" va="0.0" pv="0:360" tip="&phi; of H axis"/>
+                <SFLOAT fn="FishEye" va="0.0" pv="0:inf" st="OFF" ul="&debug;"/>
+                <FLOAT  fn="rTo" va="1100.0" pv="0:inf" ul="&debug;" u="&length;"/>
+                <FLOAT  fn="zTo" va="2300.0" pv="0:inf" ul="&debug;" u="&length;"/>
+            </Group>
+
+            <Group name="3DBox" sname="3DBox" scope="LOCAL" guiUsage="PROJECTION" toolTip="3D Box Projection">
+                <LINK   to="3D.Mode"/>
+                <LINK   to="3D.xAxis"/>
+                <LINK   to="3D.yAxis"/>
+                <LINK   to="3D.zAxis"/>
+                <FLOAT  fn="Phi" sn="&phi;" va="0.0" pv="0:360" tip="&phi; Angle of H axis"/>
+                <FLOAT  fn="Scale" va="0.8"/>
+                <FLOAT  fn="ZP" va="1.0E-4"/>
+                <FLOAT  fn="xz" va="0.2"/>
+                <FLOAT  fn="yz" va="-0.05"/>
+                <STATUS fn="ellipses" st="ON" tip=""/>
+            </Group>
+
+            <Group name="LegoPlot" sname="LegoPlot" scope="LOCAL" guiUsage="PROJECTION" toolTip="Lego Plot Projection">
+                <Command name="Trigger Debugging" command="LEGOTRIGGER" toolTip="Display 4 LegoPlots for trigger debugging" ul="&user;"/>
+                <Command name="Return" command="RETURNLEGOTRIGGER" toolTip="Return from LegoPlots for trigger debugging" ul="&user;"/>
+                <ENUM   fn="Mode" sn="Calo View" va="0" pv="Calo=0, LVL1TriggerTower=1, LVL1JetElement=2" tip="Select Data Type for View"/>
+                <FLOAT  fn="ET Axis Height" va="0.0" pv="0:14000" tip="Maximal Height in GeV of ET Axis (0 = Auto)"/>
+                <STATUS fn="Scale To AOD" st="ON" tip="Scale to object data, rather than cells (only available if AOD data is switched on and Et axis height=0)"/>
+                <ENUM   fn="Tower Outlines" sn="Fill Towers" va="0" pv="Cells=0, AOD=1, Neither=2, Both=3" tip="Hide the selected towers colour but leave their outline"/>
+                <INT    fn="nphicells" sn="&phi; Cells" va="128" pv="1:1000" tip="Number of Phi Bins"/>
+                <INT    fn="netacells" sn="&eta; Cells" va="200" pv="1:4000" tip="Number of Eta Bins"/>
+                <FLOAT  fn="Lego Cut" va="0.05" tip="Minimum Lego Bar Energy Drawn" u="&energy;"/>
+                <FLOAT  fn="Jet Circle Radius" va="0.0" tip="Jet Circle Radius"/>
+                <STATUS fn="Jet Text" st="OFF" tip="Draw the jet ET as text next to circle"/>
+                <ENUM   fn="Scale" va="0" pv="standard=0,logarithmic=1,square root=2" tip="Scale Type"/>   
+                <STATUS fn="Reverse" st="OFF" tip="Reverse &eta;"/>
+                <STATUS  fn="MainLegend" sn="Main Legend" st="ON" tip="Includes: Missing Et, cell colours, Max Et, trigger decsion" ul="&user;"/>
+                <STATUS  fn="L1EtLegend" sn="L1 ET Legend" st="ON" tip="L1 sum ET and missing ET" ul="&user;"/>
+                <STATUS  fn="L1Items" sn="L1 Item list" st="OFF" tip="Display the L1 item list" ul="&user;"/>
+                <STATUS  fn="L2Items" sn="L2 Item list" st="OFF" tip="Display the L2 item list" ul="&user;"/>
+                <STATUS  fn="EFItems" sn="EF Item list" st="OFF" tip="Display the EF item list" ul="&user;"/>
+                <STATUS  fn="DrawPlot" sn="Draw Plot" st="ON" tip="Use to hide the Lego plot for easier viewing of legend"/>
+            </Group>
+
+            <Group name="TrackResidual" sname="Residual" scope="GLOBAL" guiUsage="PROJECTION" toolTip="Track Residual Projection">
+                <ENUM   fn="Scale" va="0" pv="linear=0,logarithmic=1" tip="Scale Type"/>
+                <STATUS fn="ErrorBar" sn="Show Error Bar" st="OFF" tip="Show error bar for each residual"/>
+                <STATUS fn="ShowExtra" sn="Show Loc2/Pull2" st="OFF" tip="Show extra residual information"/>
+            </Group>
+
+            <Group name="N3D" sname="N3D" scope="LOCAL" guiUsage="PROJECTION" toolTip="New 3D Projection" userLevel="&superuser;">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" tip="View Mode" ul="&superuser;"/>
+                <STATUS fn="Axis" sn="Draw Axis" st="ON" tip="Draw guide axis"/>
+            </Group>
+                    
+            <Group name="NPhysics" sname="Physics" scope="LOCAL" guiUsage="PROJECTION" toolTip="New 3D Physics Projection" userLevel="&superuser;">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" tip="View Mode" ul="&superuser;"/>
+                <STATUS fn="Axis" sn="Draw Axis" st="OFF" tip="Draw guide axis"/>
+            </Group>
+                    
+            <Group name="NYX" sname="NYX" scope="LOCAL" guiUsage="PROJECTION" toolTip="New YX Projection" userLevel="&superuser;">
+                <ENUM   fn="Mode" sn="View" va="0" pv="Standard=0" tip="View Mode" ul="&superuser;"/>
+                <STATUS fn="Axis" sn="Draw Axis" st="OFF" tip="Draw guide axis"/>
+            </Group>
+                    
+            <Group name="EventInfo" sname="Event Info" scope="LOCAL" guiUsage="PROJECTION" toolTip="Display Event Info Window">
+                <ENUM sn="View" va="0" ul="3" tip="" scope="" fn="Mode" pv="Standard=0"/>
+            </Group>
+
+        </SuperGroup>
+
+        <SuperGroup name="Data" toolTip="Data Type Selection">
+
+            <Group name="Data" scope="LOCAL" guiUsage="TABLE" toolTip="Data To Be Drawn">
+
+                <StatusRoot fn="Status" tip="Data Selection Status">
+                    <StatusGroup fn="InDet" tip="Inner Detector">
+                        <STATUS  fn="InDetTrack" sn="Track Collections" st="ON" tip="Reconstructed Inner Detector Track Collections" ul="&user;"/>
+                        <STATUS  fn="InDetSegment" sn="Segment Collections" st="OFF" tip="Reconstructed InDet Segment Collections" ul="&user;"/>
+                        <STATUS  fn="S3D" sn="SpacePoint" st="OFF" tip="Silicon 3D Space Points" ul="&user;"/>
+                        <STATUS  fn="SiCluster" sn="SCT_Cluster" st="OFF" tip="Silicon Strip Cluster" ul="&user;"/>
+                        <STATUS  fn="PixelCluster" sn="PixelCluster" st="OFF" tip="Pixel Cluster" ul="&user;"/>
+                        <STATUS  fn="TrigS3D" sn="TrigSiSpacePoint" st="OFF" tip="Online Silicon 3D Space Points" ul="&user;"/>
+                        <STATUS  fn="PixelRDO" st="OFF" tip="Pixel Raw Data Object" ul="&user;"/>
+                        <STATUS  fn="SiClusterRDO" st="OFF" tip="Silicon Cluster Raw Data Object" ul="&user;"/>
+                        <STATUS  fn="TRT" sn="TRT_DriftCircle" st="OFF" tip="TRT_DriftCircle Hits" ul="&user;"/>
+                        <STATUS  fn="STr" sn="SimChargedTrack" st="OFF" tip="Simulated Tracks (Charged Truth)"/>
+                        <STATUS  fn="SVx" sn="SimVertex" st="OFF" tip="Simulated Vertices (Truth Vertex)"/>
+                        <STATUS  fn="RVx" sn="RecVertex" st="ON" tip="Reconstructed Vertices"/>
+                    </StatusGroup>
+                            
+                    <StatusGroup fn="Calo" tip="Calorimeter">
+                        <STATUS  fn="Cluster" sn="Cluster Collections" st="OFF" tip="Cluster Collections"/>
+                        <STATUS  fn="LAr" st="ON" tip="Liquid Argon Calorimeter" ul="&user;"/>
+                        <STATUS  fn="TILE" st="ON" tip="Tile Calorimeter" ul="&user;"/>
+                        <STATUS  fn="HEC" st="ON" tip="Hadronic End Cap" ul="&user;"/>
+                        <STATUS  fn="FCAL" st="ON" tip="Forward Calorimeter" ul="&user;"/>
+                        <STATUS  fn="MBTS" st="ON" tip="Minimum Bias Trigger Scintillator" ul="&user;"/>
+                        <STATUS  fn="SNP" sn="SimNeutralTrack" st="OFF" tip="Simulated Neutral Particles in Calorimeter (Neutral Truth)"/>
+                        <STATUS  fn="EmTauROI" st="OFF" tip="Electromagnetic/Tau Region of Interest" ul="&user;"/>
+                        <STATUS  fn="JetROI" st="OFF" tip="Jet Region of Interest" ul="&user;"/>
+                        <STATUS  fn="LVL1TriggerTower" st="OFF" tip="Level-1 Calorimeter Trigger Input Data: e/gamma, tau/had" ul="&user;"/>
+                        <STATUS  fn="LVL1JetElement" st="OFF" tip="Level-1 Calorimeter Trigger Input Data: jet, ET-Miss/ET-Sum" ul="&user;"/>
+                    </StatusGroup>
+                            
+                    <StatusGroup fn="MuonDet" tip="Muon Detector">
+                        <STATUS  fn="MuonTrack" sn="Track Collections" st="ON" tip="Reconstructed Muon Track Collections" ul="&user;"/>
+                        <STATUS  fn="MuonSegment" sn="Segment Collections" st="OFF" tip="Reconstructed Muon Segment Collections" ul="&user;"/>
+                        <STATUS  fn="MDT" st="ON" tip="Monitored Drift Tube Chambers" ul="&user;"/>
+                        <STATUS  fn="CSC" sn="CSC Clusters" st="ON" tip="Cathode Strip Chambers" ul="&user;"/>
+                        <STATUS  fn="CSCD" sn="CSC Digits" st="ON" tip="Cathode Strip Chambers Digits" ul="&user;"/>
+                        <STATUS  fn="RPC" sn="RPC Collections" st="ON" tip="Resistive Plate Chamber" ul="&user;"/>
+                        <STATUS  fn="TGC" st="ON" tip="Thin Gap Chambers" ul="&user;"/>
+                        <STATUS  fn="SMTr" sn="SimMuonTrack" st="OFF" tip="Simulated Muon Tracks" ul="&user;"/>
+                        <STATUS  fn="MuonROI" st="OFF" tip="Muon Region of Interest" ul="&user;"/>
+                    </StatusGroup>
+                            
+                    <StatusGroup fn="Objects" tip="Physics Objects and Analysis Object Data">
+                        <STATUS  fn="Jet" sn="Jet Collections" st="ON" tip="Jet Collections"/>
+                        <STATUS  fn="ETMis" sn="ETMis Collections" st="ON" tip="Missing ET Collections"/>                        
+                        <STATUS  fn="BJet" sn="BJet Collections" st="ON" tip="B-tagged Jet"/>
+                        <STATUS  fn="Electron" sn="Electron Collections" st="ON" tip="Electron"/>
+                        <STATUS  fn="Muon" sn="Muon Collections" st="ON" tip="Muon"/>
+                        <STATUS  fn="Photon" sn="Photon Collections" st="ON" tip="Photon"/>
+                        <STATUS  fn="TauJet" sn="Taujet Collections" st="ON" tip="Tau"/>
+                        <STATUS  fn="CompositeParticle" sn="CompositeParticle Collections" st="OFF" tip="CompositeParticle from TruthParticle"/>
+                    </StatusGroup>
+                </StatusRoot>
+            </Group>
+
+        </SuperGroup>
+
+        <SuperGroup name="Cuts" toolTip="Apply Selection Cuts on Various Datatypes">
+                
+            <Group name="CutsInDet" sname="InDet" guiUsage="TABLE" toolTip="Inner Detector Cuts" userLevel="&user;">
+                <SFCUT  fn="Pt" va="1.0" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum of Tracks" u="&energy;"/>
+                <SFCUT  fn="d0" va="0.25" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&lt;" tip="Impact Parameter of Tracks" u="&length;"/>
+                <SFCUT  fn="z0" va="20.0" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&lt;" tip="|z0| for Tracks" u="&length;"/>
+                <SFCUT  fn="d0 Loose" va="2.0" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&lt;" tip="Impact Parameter of Tracks" u="&length;"/>
+                <SFCUT  fn="z0-zVtx" va="0.25" pv="0:inf" st="OFF" isMod="YES" op="&real;" dop="&lt;" tip="|z0-zPrimaryVertex| for Tracks" u="&length;"/>
+                <SICUT  fn="Layer" va="0" pv="0:inf" st="OFF" op="&int;" dop="&gt;" tip="Cut inner subdetectors by Layer"/>
+                <SICUT  fn="Num Pixel" sn="Number Pixel Hits" va="2" pv="0:10" st="OFF" op="&int;" dop="&ge;" tip="Cut by number of pixel hits on reconstructed track" ul="&user;"/>
+                <SICUT  fn="Num SCT" sn="Number SCT Hits" va="7" pv="0:25" st="OFF" op="&int;" dop="&ge;" tip="Cut by number of SCT hits on reconstructed track" ul="&user;"/>
+                <SICUT  fn="Num TRT" sn="Number TRT Hits" va="15" pv="0:50" st="OFF" op="&int;" dop="&ge;" tip="Cut by number of TRT hits on reconstructed track" ul="&user;"/>
+                <SICUT  fn="STr Code" sn="Sim. Particle PDG-ID" va="40" pv="0:inf" st="OFF" isMod="YES" op="&int;" dop="&lt;" tip="Simulated Tracks by PDG table particle identifier"/>
+                <SICUT  fn="STr" sn="Sim. Particle Barcode" va="0" pv="0:inf" st="OFF" op="&int;" dop="=" tip="Simulated Tracks by Identifier"/>
+                <SENUM  fn="STr Type" sn="Sim. Particle Type" va="1" pv="charged hadron=1,tau=2,electron=3,muon=4,neutral hadron=5,photon=6,neutrino=7,W=10,From Ntuple=11" st="OFF" tip="Simulated Tracks by Particle Type"/>
+                <SICUT  fn="SVx" sn="SimVertex" va="0" pv="0:inf" st="OFF" op="&int;" dop="=" tip="Simulated Vertex by Identifier"/>
+                <ENUM   fn="SCT" sn="SCT/Pixel" va="-1" pv="All=-1,Endcap-=0,Barrel=1,Endcap+=2" tip="Choose Semiconductor Tracker Block" ul="&user;"/>
+                <ENUM   fn="TRT" sn="TRT_DriftCircle" va="-1" pv="All=-1,Barrel-=1,Barrel+=2" tip="Choose Transition Radiation Tracker Block" ul="&user;"/>
+                <SICUT  fn="Eta Module" sn="&eta; module" va="0" pv="-inf:inf" st="OFF" op="&int;" dop="&ge;" tip="SpacePoints by SCT/Pixel &eta; Module"/>
+                <SICUT  fn="Phi Module" sn="&phi; module" va="0" pv="0:inf" st="OFF" op="&int;" dop="&ge;" tip="SpacePoints by SCT/Pixel &phi; Module"/>
+                <SICUT  fn="RTrIndex" sn="Track Index" va="0" pv="0:inf" st="OFF" op="&int;" dop="=" tip="Reconstructed Track by Index"/>
+                <ENUM   fn="Hits By STr" sn="Hits By SimTrack" va="0" pv="&assocCutOptions;" tip="Hits by Simulated Tracks" ul="&user;"/>
+                <ENUM   fn="Hits By RTr" sn="Hits By RecTrack" va="0" pv="&assocCutOptions;" tip="Hits by Recontructed Tracks" ul="&user;"/>
+                <ENUM   fn="Hits By Segment" sn="Hits By Segment" va="0" pv="&assocCutOptions;" tip="Hits by Recontructed Segment" ul="&user;"/>
+                <ENUM   fn="Hit Type" va="2" pv="Noise=0,Good=1,All=2" tip="Hit by Type"/>
+                <SICUT  fn="Group" va="0" pv="0:inf" st="OFF" op="&int;" dop="&gt;" tip="SpacePoints by Group" ul="&user;"/>
+                <SENUM  fn="Threshold" sn="TRT Threshold" va="1" pv="low=0,high=1" st="OFF" tip="TRT_DriftCircle Threshold" ul="&user;"/>
+                <STATUS fn="Noise" sn="TRT Noise Cut" st="OFF" tip="TRT_DriftCircle Noise Cut" ul="&user;"/>
+                <SFCUT  fn="TRTTimeOverThreshold" sn="TRT Time Over Threshold" va="20.0" pv="0:inf" st="OFF" op="&real;" dop="&gt;" tip="TRT Drift Circle Time Over Threshold Cut"/>
+                <SICUT  fn="trackAuthor" sn="Author" va="1" pv="0:inf" st="OFF" isMod="YES" op="&int;" dop="=" tip="TrigInDetTrack" ul="&user;"/> 
+                <SICUT  fn="NumRVxTracks" sn="RVx tracks" va="3" pv="0:1000" st="ON" op="&int;" dop="&ge;" tip="Cut by number of tracks on reconstructed vertex" ul="&user;"/>
+                <SICUT  fn="PrimaryRVx" sn="RVx primary only" va="1" pv="0:10" st="OFF" op="&int;" dop="&ge;" tip="Cut on primary vertex identifier" ul="&user;"/>
+            </Group>
+
+            <Group name="CutsCalo" sname="Calo" guiUsage="TABLE" toolTip="Calorimeter Cuts" userLevel="&user;">
+                <SFCUT  fn="LAr ET" va="0.2" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="LAr transverse energy (Et) cut" u="&energy;"/>
+                <SFCUT  fn="LAr Energy" va="0.2" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="LAr energy (E) cut" u="&energy;"/>
+                <SFCUT  fn="LAr Energy Layer 0" va="0.5" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="LAr energy (E) cut for layer 0 only (presampler)" u="&energy;"/>
+                <SFCUT  fn="LAr Energy Layer 1" va="0.06" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="LAr energy (E) cut for layer 1 only" u="&energy;"/>
+                <SFCUT  fn="LAr Energy Layer 2" va="0.155" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="LAr energy (E) cut for layer 2 only" u="&energy;"/>
+                <SFCUT  fn="LAr Energy Layer 3" va="0.125" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="LAr energy (E) cut for layer 3 only" u="&energy;"/>
+                <SFCUT  fn="Tile ET" va="0.1" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="Tile transverse energy (Et) cut" u="&energy;"/>
+                <SFCUT  fn="Tile Energy Bottom" va="0.25" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Tile energy (E) cut lower threshold" u="&energy;"/>
+                <SFCUT  fn="Tile Energy Up" va="100.0" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&lt;" tip="Tile energy (E) cut upper threshold" u="&energy;"/>
+                <SICUT  fn="Tile PMT ADC" va="1" pv="0:inf" st="OFF" op="&int;" dop="&lt;" tip="Tile PMT1 and PMT2 ADC Status cut"/>
+                <SFCUT  fn="FCAL ET" va="0.5" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="FCAL transverse energy (Et) cut" u="&energy;"/>
+                <SFCUT  fn="FCAL Energy" va="2.0" pv="0.0001:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="FCAL energy (E) cut" u="&energy;"/>
+                <SFCUT  fn="HEC ET" va="2.5" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="HEC transverse energy (Et) cut" u="&energy;"/>
+                <SFCUT  fn="HEC Energy" va="2.5" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="HEC energy (E) cut" u="&energy;"/>
+                <SFCUT  fn="MBTS Energy" va="0.01" pv="0.00001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="MBTS energy (E) cut" u="&energyMEV;"/>
+                <ENUM   fn="LAr" sn="LAr region" va="-1" pv="All=-1,Endcap-=0,Endcap+=1,Endcaps (both)=2,Barrel=3" tip="LAr detector region cut" ul="&user;"/>
+                <ENUM   fn="FCAL" sn="FCAL region" va="-1" pv="All=-1,Endcap-=0,Endcap+=1" tip="FCAL detector region cut" ul="&user;"/>
+                <ENUM   fn="HEC" sn="HEC region" va="-1" pv="All=-1,Endcap-=-2,Endcap+=2" tip="HEC detector region cut" ul="&user;"/>
+                <ENUM   fn="MBTS" sn="MBTS region" va="-1" pv="All=-1,Endcap-=0,Endcap+=1" tip="MBTS detector region cut" ul="&user;"/>
+                <SFCUT  fn="Cluster ET" va="1.0" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum of Clusters" u="&energy;"/>
+                <SFCUT  fn="LVL1Trigger ET" va="0.2" pv="0.0001:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Energy (Level-1 Trigger)" u="&energy;"/>
+                <SICUT  fn="Layer" sn="Layer (sampling)" va="0" pv="0:3" st="OFF" op="&int;" dop="&gt;" tip="Cut by calorimeter layer (sampling)" ul="&user;"/>
+                <SENUM  fn="Cell Quality" sn="Cell Quality" va="0" pv="Good=0, Bad=1" st="ON" tip="Cut by calorimeter cell quality" ul="&user;"/>
+            </Group>
+
+            <Group name="CutsMuon" sname="MuonDet" guiUsage="TABLE" toolTip="Muon Detector Cuts" userLevel="&user;">
+                <SFCUT  fn="Pt" va="20.0" pv="0:inf" st="OFF" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum of Muon Tracks" u="&energy;" />
+                <!-- LINK to="CutsInDet.Pt" -->
+                <LINK to="CutsInDet.HitsByRTr" />
+                <LINK to="CutsInDet.HitsBySegment" />
+                <SFCUT  fn="Charge" va="75000.0" pv="0.:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Charge (CSC's)" ul="&superuser;"/>
+            </Group>
+
+            <Group name="CutsObjects" sname="Objects" guiUsage="TABLE" toolTip="Physics Object and Analysis Object Data Cuts" userLevel="&user;">
+                <SFCUT  fn="Jet ET" va="15.0" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum of Jets" u="&energy;"/>
+                <SFCUT  fn="Jet EMfraction" va="0.95" pv="0.0:1.0" st="ON" op="&real;" dop="&lt;" tip="em-fraction of Jets"/>
+                <SFCUT  fn="Jet VxFraction" va="0.75" pv="0.0:1.0" st="ON" op="&real;" dop="&gt;" tip="Jet Vertex Fraction"/>
+                <ENUM   fn="Jet BTagger" sn="BTagger" va="0" pv= "None=0" tip="Select B Tagger to use"/>               
+                <SFCUT  fn="Jet BTag weight" sn="BTag weight" va="0.0" pv="-inf:inf" op="&gt;" st="ON" tip="B-tagging Algorithm's Weight"/>   
+                <SFCUT  fn="ETMis" va="15.0" pv="0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Missing Energy" u="&energy;"/>
+                <SFCUT  fn="Electron Pt" va="5.0" pv="0.0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum" u="&energy;"/>
+                <SICUT  fn="Electron isEM" va="0" pv="0:inf" st="OFF" op="&intEqual;" dop="=" tip="Electromagnetic Criteria passed (bitmap)"/>
+                <SENUM  fn="Electron isEMString" sn="Electron isEMString" va="1" pv="TightPP=0,Tight=1,Medium=2,Loose=3" st="ON" tip="Electromagnetic Criteria"/>
+                <SFCUT  fn="Electron eOverp" va="0.0" pv="0.0:inf" st="OFF" op="&real;" dop="&gt;" tip="Ratio of Energy over Momentum"/>
+                <STATUS fn="Electron hasTrack" st="ON" tip="Require matching Track for AOD Electron"/>
+                <SFCUT  fn="Muon Pt" va="5.0" pv="0.0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum" u="&energy;"/>
+                <SFCUT  fn="Muon chi2" va="0.0" pv="0.0:inf" st="OFF" op="&real;" dop="&lt;" tip="Fit Chi2"/>
+                <SFCUT  fn="Photon Pt" va="5.0" pv="0.0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum" u="&energy;"/>
+                <SICUT  fn="Photon isEM" va="0" pv="0:inf" st="OFF" op="&intEqual;" dop="=" tip="Electromagnetic Criteria passed (bitmap)"/>
+                <SENUM  fn="Photon isEMString" sn="Photon isEMString" va="1" pv="Tight=0,Loose=1" st="ON" tip="Electromagnetic Criteria"/>
+                <SFCUT  fn="TauJet Pt" va="5.0" pv="0.0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum" u="&energy;"/>
+                <SICUT  fn="TauJet Charge" va="1" pv="0:inf" st="ON" isMod="YES" op="&int;" dop="=" tip="Total Charge"/>
+                <SICUT  fn="TauJet NumTracks" va="3" pv="0:inf" st="ON" isMod="YES" op="&int;" dop="&le;" tip="Number of Tracks"/>
+                <SENUM  fn="TauJet isTauString" sn="TauJet isTauString" va="1" pv="TauCutTight=0,TauCutMedium=1,TauCutLoose=2,TauLlhTight=3,TauLlhMedium=4,TauLlhLoose=5" st="ON" tip="TauJet Criteria"/>
+                <SFCUT  fn="BJet Pt" va="5.0" pv="0.0:inf" st="ON" isMod="YES" op="&real;" dop="&gt;" tip="Transverse Momentum" u="&energy;"/>
+                <SFCUT  fn="BJet lhSig" va="0.9" pv="0.0:1.0" st="ON" op="&real;" dop="&gt;" tip="Likelihood Significance"/>
+                <SFCUT  fn="BJet weight" va="0.0" pv="0.0:inf" st="OFF" op="&real;" dop="&gt;" tip="B-tagging Algorithm's Weight"/>
+                        
+                <SFCUT  fn="TauJet isolFrac" va="0.3" pv="0.0:inf" st="OFF" op="&real;" dop="&gt;" tip="Isolation Fraction"/>
+                <SFCUT  fn="TauJet logLhRatio" va="-2.0" pv="-inf:inf" st="OFF" op="&real;" dop="&gt;" tip="Log-likelihood Ratio between Tau and Jet"/>
+            </Group>
+
+            <Group name="CutsATLAS" sname="ATLAS" guiUsage="TABLE" toolTip="Cuts throughout ATLAS" userLevel="&user;">
+                <Command name="Toggle Standard" command="CC" toolTip="Toggle Common Cuts"/>
+                <SICUT  fn="Index" va="0" pv="0:inf" st="OFF" op="&int;" dop="&lt;" tip="Cut by Index"/>
+                <FLOAT  fn="Phi Middle" sn="&phi;" va="0.0" pv="-inf:inf" tip="Central &phi; value for &phi; Cut (in degrees)"/>
+                <SFLOAT fn="Cut Phi" sn="Cut &phi;" va="0.0" pv="0:720"	st="OFF" tip="&delta;&phi; for &phi; Cut (in degrees)"/>
+                <FLOAT  fn="Eta Middle" sn="&eta;" va="0.0" pv="-6:6" tip="Central &eta; value for &eta; Cut"/>
+                <SFLOAT fn="CutEta" sn="Cut &eta;" va="1.0" pv="0:6" st="OFF" tip="&delta;&eta; for &eta; Cut"/>
+                <STATUS fn="ByList" st="OFF" tip="Draw Data in Current List Selection"/>
+            </Group>
+
+        </SuperGroup>
+           
+        <SuperGroup name="InDet" toolTip="Inner Detector">
+
+            <Group name="InDetTrack" sname="Track" guiUsage="TABLE" toolTip="Reconstructed Track Collections - Colors and Symbols">
+                <Command name="Zoom Next Track" command="ZOOMNEXTTRACK" toolTip="Zoom Next Track" ul="&user;"/>
+                <ENUM   fn="InDetTrack Collections" sn="Track Collections"  va="0" pv="None=0" tip="Select collection of Reconstructed Track to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="3" pv="&colorFnRTr;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="25" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Colour for shared objects in associations"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <ENUM   fn="Drawn As" va="2" pv="Helix=0,Polyline=1,Smooth curve=2" tip="Draw Tracks either as Helices or Polylines (always Drawn as Helices in &phi;&eta; Projection)"/>
+                       
+                <SINT   fn="Next Track" va="0" pv="0:inf" st="OFF" ul="&user;" tip="Select a Single Track by the Index Number"/>
+                <LINK   to="RTr.d0Sign"/>
+                <LINK   to="RTr.RadiusTr"/>
+                <LINK   to="RTr.LineTr"/>
+                <LINK   to="RTr.ZTr"/>
+                <LINK   to="RTr.CallDepth"/>
+                        
+                       
+            </Group>
+                        
+
+            <Group name="InDetSegment" sname="Segment" guiUsage="TABLE" toolTip="Reconstructed InDet Segment Collections - Colors and Symbols">
+                <ENUM   fn="InDet Segment Collections" sn="Segment Collections" va="0" pv="None=0" tip="Select collection of Reconstructed Segment to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="21" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <FLOAT  fn="Segment Length" va="100.0" pv="0:inf" tip="Length of the Segments Drawn" u="&length;"/>
+            </Group>
+
+            <Group name="S3D" sname="SpacePoint" guiUsage="TABLE" toolTip="Silicon 3D SpacePoints - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="S3D Collections" sn="SpacePoint Collections" va="0" pv="None=0" tip="Select collection of SpacePoints to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnS3D;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant" />
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Ungrouped" va="14" pv="&dataCol;" st="OFF" tip="Color for Ungrouped"/>
+                <LINT   fn="Symbol Size" va="3" pv="1:8"/>
+                <ENUM   fn="Symbol" va="0" pv="&symbol;"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINT   fn="Noise Size" va="2" pv="1:8" tip="Noise Symbol Size"/>
+                <SENUM  fn="Noise" va="3" pv="&symbol;" st="OFF" tip="Noise Symbol"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Frame Width" ul="&debug;"/>
+            </Group>
+                    
+            <Group name="PixelCluster" sname="PixelCluster" guiUsage="TABLE" toolTip="Pixel Cluster - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="PixelCluster Collections" sn="PixelCluster Collections" va="0" pv="None=0" tip="Select collection of Pixel clusters to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="2" pv="&colorFnPixCluster;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINT   fn="Noise Size" va="2" pv="1:8" tip="Noise Symbol Size"/>
+                <SENUM  fn="Noise" va="3" pv="&symbol;" st="OFF" tip="Noise Symbol"/>
+                <LINT   fn="Symbol Size" va="3" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="ON" tip="Display using Symbols" ul="&superuser;"/>
+                <SENUM  fn="Stereo" va="0" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" tip="Stereo Angle of Strips" ul="&superuser;"/>
+            </Group>
+
+            <Group name="SiCluster" sname="SCT_Cluster" guiUsage="TABLE" toolTip="Silicon Cluster - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="SiCluster Collections" sn="SCT_Cluster Collections" va="0" pv="None=0" tip="Select collection of Silicon clusters to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="2" pv="&colorFnSiCluster;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="2" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+                <SENUM  fn="Stereo" va="0" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" tip="Stereo Angle of Strips" ul="&superuser;"/>
+            </Group>
+
+            <Group name="TrigS3D" sname="TrigSiSpacePoint" guiUsage="TABLE" toolTip="Online Silicon 3D Space Points - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="TrigS3D Collections" sn="TrigSpacePoint Collections" va="0" pv="None=0" tip="Select collection of Trigger SpacePoints to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnTrigS3D;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Ungrouped" va="14" pv="&dataCol;" st="OFF" tip="Color for Ungrouped"/>
+                <LINT   fn="Symbol Size" va="3" pv="1:8"/>
+                <ENUM   fn="Symbol" va="0" pv="&symbol;"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINT   fn="Noise Size" va="2" pv="1:8" tip="Noise Symbol Size"/>
+                <SENUM  fn="Noise" va="3" pv="&symbol;" st="OFF" tip="Noise Symbol"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Frame Width" ul="&debug;"/>
+            </Group>
+
+            <Group name="PixelRDO" sname="PixelRDO" guiUsage="TABLE" toolTip="Pixel Raw Data Object - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="PixelRDO Collections" sn="Pixel Raw Data Collections" va="0" pv="None=0" tip="Select collection of Pixel Raw Data Objects to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="Constant = 0"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="21" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Symbol Size" va="3" pv="1:8"/>
+                <ENUM   fn="Symbol" va="0" pv="&symbol;"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINT   fn="Noise Size" va="2" pv="1:8" tip="Noise Symbol Size"/>
+                <SENUM  fn="Noise" va="3" pv="&symbol;" st="OFF" tip="Noise Symbol"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Frame Width" ul="&debug;"/>
+            </Group>
+
+            <Group name="SiClusterRDO" sname="SiClusterRDO" guiUsage="TABLE"
+                   toolTip="Silicon Cluster Raw Data Object - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="SiClusterRDO Collections" sn="SiClusterRDO Collections" va="0" pv="None=0" tip="Select collection of Silicon Cluster RDOs to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="1" pv="Constant = 0, Error = 1, Orientation = 2"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Error" va="20" pv="&dataCol;" tip="Color when Color Function is Error"/>
+                <LINT   fn="Line Width" va="3" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="2" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+                <SENUM  fn="Stereo" va="0" pv="UStrips=-1,PhiStrips=0,VStrips=1" st="OFF" tip="Stereo Angle of Strips" ul="&superuser;"/>
+            </Group>
+
+            <Group name="TRT" sname="TRT DriftCircle" guiUsage="TABLE"
+                   toolTip="TRT Drift Circle Hits- Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="TRT Collections" sn="TRT DriftCircle Collections" va="0" pv="None=0" tip="Select collection of TRT drift circles to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnTRT;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="3" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="2" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+
+            <Group name="STr" sname="SimChargedTrack" guiUsage="TABLE"
+                   toolTip="Simulated Tracks (Charged Truth) - Colors and Symbols">
+                <Command name="Zoom Next Track" command="ZOOMNEXTSTR" toolTip="Zoom Next Simulated Track"/>
+                <ENUM   fn="STr Collections" sn="SimChargedTrack Collections" va="0" pv="None=0" tip="Select collection of Simulated tracks to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnSTr;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SINT   fn="Next Track" va="0" pv="0:inf" st="OFF" ul="&user;" tip="Select a Single Simulated Track by the Index Number"/>
+                <LINK   to="RTr.d0Sign"/>
+                <LINK   to="RTr.RadiusTr"/>
+                <LINK   to="RTr.LineTr"/>
+                <LINK   to="RTr.ZTr"/>
+                <LINK   to="RTr.CallDepth"/>
+            </Group>
+
+            <Group name="RTr" toolTip="Reconstructed Tracks - Colors and Symbols">
+                <ENUM   fn="RTr Collections" sn="Reco Track Collections" va="0" pv="None=0" tip="Select collection of reconstructed tracks to draw" ul="&user;"/>
+                <ENUM   fn="d0 Sign" va="0" pv="ch=0,-ch=1,+=2,-=3" tip="Sign Convention for d0" ul="&superuser;"/>
+                <FLOAT  fn="Radius Tr" sn="&rho; Track as Helix" va="108.0" pv="0:inf" tip="Maximal &rho; to which Tracks are Drawn as Helices" u="&length;"/>
+                <FLOAT  fn="Line Tr" sn="&rho; Track linearly" va="0.0" pv="0:inf" tip="&rho; to which Tracks are Drawn as Lines beyond the region in which Tracks are Drawn as Helices" u="&length;"/>
+                <FLOAT  fn="Z Tr" sn="Z Track" va="338.0" pv="0:inf" tip="Absolute Maximal Z to which Tracks are Drawn" u="&length;"/>
+                <LINT   fn="Call Depth" va="10" pv="2:15" ul="&superuser;"/>
+            </Group>
+
+            <Group name="SVx" sname="SimVertex" guiUsage="TABLE" toolTip="Simulated Vertices (Truth Vertex) - Colors and Symbols">
+                <ENUM   fn="SVx Collections" sn="SimVertex Collections" va="0" pv="None=0" tip="Select collection of Simulated Vertices to draw" ul="&user;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Symbol" va="0" pv="&symbol;" tip="Symbol Type"/>
+                <LINT   fn="Symbol Size" va="5" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="2" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="RVx" sname="RecVertex" guiUsage="TABLE" toolTip="Reconstructed Vertices - Colors and Symbols">
+                <ENUM   fn="RVx Collections" sn="RecoVertex Collections" va="0" pv="None=0" tip="Select collection of Reconstructed Vertices to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="24" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <LINT   fn="Symbol Size" va="3" pv="0:8"/>
+                <FLOAT  fn="Num Sigma" sn="&sigma;" va="100.0" pv="0:inf" tip="Standard Deviation"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+
+            <Group name="Fil" sname="Hit Filter" guiUsage="TABLE" toolTip="Hit Filter Setup" userLevel="&user;">
+                <Command name="Run Filter" command="FH" toolTip="Run the Filter"/>
+                <LINT   fn="Num Hits" va="5" pv="1:7" tip="Minimal Hits Required in a Bin to Pass Filter"/>
+                <INT    fn="Num Phi" sn="Num &phi;" va="1800" pv="360:2160" tip="Number of &phi; Filter Bins"/>
+                <INT    fn="Num Eta" sn="Num &eta;" va="1500" pv="100:3000" tip="Number of &eta; Filter Bins"/>
+                <FLOAT  fn="Eta Range" sn="&eta; Range" va="3.0" pv="0:inf" tip="&eta; Range"/>
+                <STATUS fn="Loop" st="ON" tip="Run Filter Loop"/>
+                <INT    fn="Num Skew" sn="Num Steps" va="11" pv="0:50" tip="Number of Steps in Filter Loop"/>
+                <FLOAT  fn="Skew Step" sn="Pt Min" va="1.0" pv="0.5:20.0" tip="Minimal Pt"/>
+            </Group>
+
+
+
+            <Group name="InDetDrawingOrder" sname="Drawing Order" guiUsage="TABLE" toolTip="Sequence in which the inner detector data (hits and tracks) are drawn on the canvas">
+                <ENUM   fn="SpacePoints Tracks" sn="Track-SpacePoint Order" va="0" pv="SimTrack Track SpacePoint=0,SimTrack SpacePoint Track=1,Track SpacePoint SimTrack=2" ul="&user;" tip="Select the Order for Drawing Tracks and Hits (last is drawn on top)"/>
+                <ENUM   fn="SpacePoints" va="0" sn="SpacePoint Order" pv="SpacePoint TrigSiSpacePoint=0,TrigSiSpacePoint SpacePoint=1" ul="&user;" tip="Select the Order for Drawing Space Points (last is drawn on top)"/>
+            </Group>
+
+        </SuperGroup>
+
+        <SuperGroup name="Calo" toolTip="Calorimeter">
+
+            <Group name="Cluster" guiUsage="TABLE" toolTip="Cluster Collections - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="Cluster Collections" sn="Cluster Collections" va="0" pv="None=0" tip="Select collection of Calorimeter clusters to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;, Objects = 2"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="14" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="3" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="LAr" guiUsage="TABLE" toolTip="Liquid Argon Calorimeter - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="LAr Collections" sn="LAr Collections" va="0" pv="None=0" tip="Select collection of Liquid Argon Cells to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnCal;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Energy Mode" va="1" pv="&energyMode;" tip="Scale Mode by Energy"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Cell Geometry" va="8" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <ENUM   fn="Energy Calibration" va="0" pv="Overall = 0, By Energy Type = 1, By Calorimeter = 2"/>
+                <SFLOAT fn="Area/Energy" va="0.0" pv="0:inf" st="OFF" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Cell Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <STATUS fn="Cells" st="ON" tip="Draw Cells"/>
+                <SCOLOR fn="Histogram" va="17"  pv="&histoCol;" st="OFF" tip="Histogram Color"/>
+                <SCOLOR fn="Histo Frame" va="11" pv="&frameCol;" st="ON" tip="Histogram Frame Color"/>
+                <FLOAT  fn="Histo Scale" va="1.0" pv="0:inf" tip="Scale Factor of Histogram"/>
+            </Group>
+
+            <Group name="TILE" guiUsage="TABLE" toolTip="Tile Calorimeter - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="TILE Collections" sn="Tile Collections" va="0" pv="None=0" tip="Select collection of Tile Cells to draw" ul="&user;"/>
+                <LINK   to="LAr.ColorFunction"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Energy Mode" va="1" pv="&energyMode;" tip="Scale Mode by Energy"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Cell Geometry" va="8" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <LINK   to="LAr.EnergyCalibration"/>
+                <SFLOAT fn="Area/Energy" va="0.0" pv="0:inf" st="OFF" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Cell Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <STATUS fn="Cells" st="ON" tip="Draw Cells"/>
+                <SCOLOR fn="Histogram" va="15" pv="&histoCol;" st="OFF" tip="Histogram Color"/>
+                <SCOLOR fn="Histo Frame" va="9" pv="&frameCol;" st="ON" tip="Histogram Frame Color"/>
+                <STATUS fn="On Top Histo Frame" st="OFF" tip="Draw Histogram Frame on Top"/>
+                <FLOAT  fn="Histo Scale" va="1.0" pv="0:inf" tip="Scale Factor of Histogram"/>
+            </Group>
+
+            <Group name="HEC" guiUsage="TABLE" toolTip="Hadronic End Cap - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="HEC Collections" sn="HEC Collections" va="0" pv="None=0" tip="Select collection of Hadronic End Cap Cells to draw" ul="&user;"/>
+                <LINK   to="LAr.ColorFunction"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Energy Mode" va="1" pv="&energyMode;" tip="Scale Mode by Energy"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Cell Geometry" va="8" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <LINK   to="LAr.EnergyCalibration"/>
+                <SFLOAT fn="Area/Energy" va="0.0" pv="0:inf" st="OFF" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+                <SCOLOR fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Cell Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <STATUS fn="Cells" st="ON" tip="Draw Cells"/>
+                <SCOLOR fn="Histogram" va="15" pv="&histoCol;" st="OFF" tip="Histogram Color"/>
+                <SCOLOR fn="Histo Frame" va="9" pv="&frameCol;" st="ON" tip="Histogram Frame Color"/>
+                <STATUS fn="On Top Histo Frame" st="OFF" tip="Draw Histogram Frame on Top"/>
+                <FLOAT  fn="Histo Scale" va="1.0" pv="0:inf" tip="Scale Factor of Histogram"/>
+            </Group>
+
+            <Group name="FCAL" guiUsage="TABLE" toolTip="Forward Calorimeter - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="FCAL Collections" sn="FCal Collections" va="0" pv="None=0" tip="Select collection of Forward Calormeter Cells to draw" ul="&user;"/>
+                <LINK   to="LAr.ColorFunction"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Energy Mode" va="1" pv="&energyMode;" tip="Scale Mode by Energy"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Cell Geometry" va="8" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <LINK   to="LAr.EnergyCalibration"/>
+                <SFLOAT fn="Area/Energy" va="0.0" pv="0:inf" st="OFF" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Cell Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <STATUS fn="Cells" st="ON" tip="Draw Cells"/>
+                <SCOLOR fn="Histogram" va="23" pv="&histoCol;" st="OFF" tip="Histogram Color"/>
+                <SCOLOR fn="Histo Frame" va="26" pv="&frameCol;" st="ON" tip="Histogram Frame Color"/>
+                <FLOAT  fn="Histo Scale" va="1.0" pv="0:inf" tip="Scale Factor of Histogram"/>
+            </Group>
+
+            <Group name="MBTS" guiUsage="TABLE" toolTip="Minimum Bias Trigger Scintillator - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="MBTS Collections" sn="MBTS Collections" va="0" pv="None=0" tip="Select collection of Minimum Bias Trigger Scinitilator Cells to draw" ul="&user;"/>
+                <LINK   to="LAr.ColorFunction"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Energy Mode" va="1" pv="&energyMode;" tip="Scale Mode by Energy"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unclustered"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <SCOLOR fn="Cell Geometry" va="8" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <LINK   to="LAr.EnergyCalibration"/>
+                <SFLOAT fn="Area/Energy" va="0.0" pv="0:inf" st="OFF" tip="Reciprocal Value of Maximal Energy Density in Calibration"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Cell Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <STATUS fn="Cells" st="ON" tip="Draw Cells" ul="&superuser;"/>
+                <SCOLOR fn="Histogram" va="15" pv="&histoCol;" st="OFF" tip="Histogram Color" ul="&superuser;"/>
+                <SCOLOR fn="Histo Frame" va="9" pv="&frameCol;" st="ON" tip="Histogram Frame Color" ul="&superuser;"/>
+                <STATUS fn="On Top Histo Frame" st="OFF" tip="Draw Histogram Frame on Top" ul="&superuser;"/>
+                <FLOAT  fn="Histo Scale" va="1.0" pv="0:inf" tip="Scale Factor of Histogram" ul="&superuser;"/>
+            </Group>
+                    
+            <Group name="SNP" sname="SimNeutralTrack" guiUsage="TABLE" toolTip="Simulated Neutral Particles in Calorimeter (Neutral Truth) - Colors and Symbols">
+                <ENUM   fn="SNP Collections" sn="SimNeutralTrack Collections" va="0" pv="None=0" tip="Select collection of Simulated Neutral Tracks to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnSTr;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <ENUM   fn="Symbol" sn="Symbol in &phi;&eta;" va="0" pv="&symbol;" tip="Symbol Type for Simulated Neutral Tracks in &phi;&eta; Projection"/>
+                <LINT   fn="Symbol Size" sn="Symbol Size in &phi;&eta;" va="4" pv="1:8" tip="Symbol Size for Simulated Neutral Tracks in &phi;&eta; Projection"/>
+            </Group>
+                    
+            <Group name="EmTauROI" guiUsage="TABLE" toolTip="Electromagnetic/Tau Region of Interest - Colors and Symbols">
+                <ENUM   fn="EmTauROI Collections" sn="EmTauROI Collections" va="0" pv="None=0" tip="Select collection of Electromagnetic/Tau Regions of Intersts to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="21" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <FLOAT  fn="deta" sn="&delta;&eta;" va="0.2" pv="-6:6"/>
+                <FLOAT  fn="dphi" sn="&delta;&phi;" va="0.2" pv="0:6.28"/>
+            </Group>
+
+            <Group name="JetROI" guiUsage="TABLE" toolTip="Jet Region of Interest - Colors and Symbols">
+                <ENUM   fn="JetROI Collections" sn="JetROI Collections" va="0" pv="None=0" tip="Select collection of Jet Regions of Interest to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="0" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <FLOAT  fn="deta" sn="&delta;&eta;" va="0.4" pv="-6:6"/>
+                <FLOAT  fn="dphi" sn="&delta;&phi;" va="0.4" pv="0:6.28"/>
+            </Group>
+
+            <Group name="LVL1TriggerTower" guiUsage="TABLE" toolTip="Level-1 Calorimeter Trigger Input Data: e/gamma, tau/had - Colors and Symbols">
+                <ENUM   fn="LVL1TriggerTower Collections" sn="LVL1TriggerTower Collections" va="0" pv="None=0" tip="Select collection of Level-1 Trigger Towers to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="Constant = 0, ECAL/HCAL = 1"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SCOLOR fn="Cell Geometry" va="5" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+                <ENUM   fn="Energy Type" va="2" pv="ECAL = 0, HCAL = 1, Both = 2"/>
+            </Group>
+
+            <Group name="LVL1JetElement" guiUsage="TABLE" toolTip="Level-1 Calorimeter Trigger Input Data: jet, ET-Miss/ET-Sum - Colors and Symbols">
+                <ENUM   fn="LVL1JetElement Collections" sn="LVL1JetElement Collections" va="0" pv="None=0" tip="Select collection of Level-1 Trigger inputs to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0"  pv="Constant = 0"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SCOLOR fn="Cell Geometry" va="5" pv="&detectCol;" st="OFF"/>
+                <SCOLOR fn="Cell Outline" va="14" pv="&detectCol;" st="OFF"/>
+            </Group>
+
+            <Group name="LVL1Result" guiUsage="TABLE" toolTip="Level-1 Result Collections">
+                <ENUM   fn="LVL1Result Collections" sn="LVL1Result Collections" va="0" pv="None=0" tip="Select collection of LVL1Result to display" ul="&user;"/>
+            </Group>
+           
+        </SuperGroup>
+           
+        <SuperGroup name="MuonDet" toolTip="Muon Detector">
+
+            <Group name="MuonTrack" sname="Track" guiUsage="TABLE" toolTip="Reconstructed Track Collections - Colors and Symbols">
+                <ENUM   fn="MuonTrack Collections" sn="Track Collections" va="0" pv="None=0" tip="Select collection of Reconstructed Muon Track to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="3" pv="&colorFnRTr;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="12" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Colour for shared objects in associations"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <ENUM   fn="Drawn As" va="1" pv="Polyline=1,Smooth curve=2" tip="Draw Tracks either as Polylines or Smooth Curves (always Drawn as Helices in &phi;&eta; Projection)"/>
+            </Group>
+
+            <Group name="MuonSegment" sname="Segment" guiUsage="TABLE" toolTip="Reconstructed InDet Segment Collections - Colors and Symbols">
+                <ENUM   fn="Muon Segment Collections" sn="Segment Collections" va="0" pv="None=0" tip="Select collection of Reconstructed Segment to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="21" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <FLOAT  fn="Segment Length" va="100.0" pv="0:inf" tip="Length of the Segments Drawn" u="&length;"/>
+            </Group>
+
+            <Group name="MDT" guiUsage="TABLE" toolTip="Monitored Drift Tube Chambers - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="MDT Collections" sn="MDT Collections" va="0" pv="None=0" tip="Select collection of Muon Drift Tube hits to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="2" pv="&colorFn;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="18" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <ENUM   fn="Mode" va="0" pv="Circle = 0, Line = 1" tip="Draw as Circle or Line"/>
+                <LINT   fn="Symbol Size" va="3" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+
+            <Group name="CSC" guiUsage="TABLE" toolTip="Cathode Strip Chambers - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="CSC Collections" sn="Cluster Collections" va="0" pv="None=0" tip="Select collection of Cathode Strip Chambers clusters to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="2" pv="&colorFn;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="18" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <COLOR  fn="Strip" va="20" pv="&dataCol;" tip="Strip Color"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="4" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+
+            <Group name="CSCD" guiUsage="TABLE" userLevel="&superuser;">
+                <ENUM   fn="CSCD Collections" sn="Strip Collections" va="0" pv="None=0" tip="Select collection of Cathode Strip Chambers hits to draw" ul="&user;"/>
+            </Group>
+
+            <Group name="RPC" guiUsage="TABLE" toolTip="Resistive Plate Chamber Collections - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="RPC Collections" sn="RPC Collections" va="0" pv="None=0" tip="Select collection of Resistive Plate Chamber hits to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFn;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="4" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+
+            <Group name="TGC" guiUsage="TABLE" toolTip="Thin Gap Chambers - Colors and Symbols" userLevel="&user;">
+                <ENUM   fn="TGC Collections" sn="TGC Collections" va="0" pv="None=0" tip="Select collection of Thin Gap Chamber hits to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFn;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="Unconnected" va="14" pv="&dataCol;" tip="Color for Unassociated"/>
+                <COLOR  fn="Shared" va="0" pv="&dataCol;" tip="Color for Shared"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <SLINT  fn="Noise Width" va="1" pv="1:5" st="OFF" tip="Noise Line Width"/>
+                <LINT   fn="Symbol Size" va="4" pv="0:8"/>
+                <STATUS fn="Force Symbols" st="OFF" tip="Display using Symbols"/>
+            </Group>
+                    
+            <Group name="SMTr" sname="SimMuonTrack" guiUsage="TABLE" toolTip="Simulated Muon Tracks - Colors and Symbols">
+                <ENUM   fn="SMTr Collections" sn="SMTr Collections" va="0" pv="None=0" tip="Select collection of Simulated Muon tracks to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnSTr;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <LINK   to="RTr.d0Sign"/>
+                <LINK   to="RTr.RadiusTr"/>
+                <LINK   to="RTr.LineTr"/>
+                <LINK   to="RTr.ZTr"/>
+                <LINK   to="RTr.CallDepth"/>
+            </Group>
+                                 
+            <Group name="MuonROI" guiUsage="TABLE" toolTip="Muon Region-of-Interest (ROI) - Colors and Symbols">
+                <ENUM   fn="MuonROI Collections" sn="MuonROI Collections" va="0" pv="None=0" tip="Select collection of Muon Region-of-Interest (ROI) to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="2" pv="1:5"/>
+                <SCOLOR fn="Frame" va="8" pv="&frameCol;" st="OFF" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+                <FLOAT  fn="deta" sn="&delta;&eta;" va="0.1" pv="-6:6"/>
+                <FLOAT  fn="dphi" sn="&delta;&phi;" va="0.1" pv="0:6.28"/>
+            </Group>
+
+        </SuperGroup>
+
+        <SuperGroup name="Objects" toolTip="Physics Objects and Analysis Object Data">
+
+            <Group name="Jet" guiUsage="TABLE" toolTip="Jet Collections - Colors and Symbols">
+                <ENUM   fn="Jet Collections" sn="Jet Collections" va="0" pv="None=0" tip="Select collection of Jet to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="0" pv="&colorFnBasicCollectionBJets;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="8" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="3" pv="1:5"/>
+                <FLOAT  fn="Scale" va="1.0" pv="0.0:1000.0"/>
+                <ENUM   fn="Scale Type" va="0" pv="length=0,area=1" tip="Scale Type"/>
+                <FLOAT  fn="Inner draw radius" va="0.0" pv="0:1000"/>
+                <SCOLOR fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="ETMis" guiUsage="TABLE" toolTip="Missing ET Collections - Colors and Symbols">
+                <ENUM   fn="ETMis Collections" sn="ETMis Collections" va="0" pv="None=0" tip="Select collection of ET Missing to draw" ul="&user;"/>
+                <ENUM   fn="Color Function" va="2" pv="&colorFnBasicCollection;"/>
+                <ENUM   fn="Draw as" sn="Draw as" va="0" pv="Arrow = 0, Dashed Line = 1" tip="Choose how to draw the Missing ET"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="14" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <ENUM   fn="Line Width" va="3" pv="ET=0, 1=1, 2=2, 3=3, 4=4, 5=5" tip="Set the line width by choosing a value or by scaling with ET"/>
+                <SCOLOR fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+                
+            <Group name="BJet" guiUsage="TABLE" toolTip="B-tagged Jet - Colors and Symbols">
+                <ENUM   fn="BJet Collections" sn="BJet Collections" va="0" pv="None=0" tip="Select collection of BJet to draw" ul="&user;"/>
+                <ENUM	fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR	fn="Constant" sn="Constant Color" va="22" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="Electron" guiUsage="TABLE" toolTip="Electron - Colors and Symbols">
+                <ENUM   fn="Electron Collections" va="0" pv="None=0" tip="Select the collection of Electron to draw" ul="&user;"/>
+                <ENUM	fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="21" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="Muon" guiUsage="TABLE" toolTip="Muon - Colors and Symbols">
+                <ENUM   fn="Muon Collections" va="0" pv="None=0" tip="Select collection of Muon to draw" ul="&user;"/>
+                <ENUM	fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR	fn="Constant" sn="Constant Color" va="20" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="Photon" guiUsage="TABLE" toolTip="Photon - Colors and Symbols">
+                <ENUM   fn="Photon Collections" va="0" pv="None=0" tip="Select collection of Photon to draw" ul="&user;"/>
+                <ENUM	fn="Color Function"	va="0" pv="&colorFnBasic;"/>
+                <COLOR	fn="Constant" sn="Constant Color" va="23" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+
+            <Group name="TauJet" guiUsage="TABLE" toolTip="Tau - Colors and Symbols">
+                <ENUM   fn="TauJet Collections" va="0" pv="None=0" tip="Select collection of TauJet to draw" ul="&user;"/>
+                <ENUM	fn="Color Function"	va="0" pv="&colorFnBasic;"/>
+                <COLOR	fn="Constant" sn="Constant Color" va="28" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <LINT	fn="Line Width"	va="1" pv="1:5"/>
+                <SCOLOR	fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT	fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+                    
+            <Group name="CompositeParticle" sname="Comp.Part." guiUsage="TABLE" toolTip="CompositeParticle - Colors and Symbols">
+                <ENUM   fn="CompositeParticle Collections" va="0" pv="None=0" tip="Select collection of CompositeParticle to draw" ul="&user;"/>
+                <ENUM	fn="Color Function" va="0" pv="&colorFnBasic;"/>
+                <COLOR  fn="Constant" sn="Constant Color" va="27" pv="&dataCol;" tip="Color when Color Function is Constant"/>
+                <COLOR  fn="ConstantW" sn="Constant Color (W)" va="24" pv="&dataCol;" tip="Color of W when Color Function is Constant"/>
+                <COLOR  fn="ConstantH" sn="Constant Color (Higgs)" va="15" pv="&dataCol;" tip="Color of Higgs when Color Function is Constant"/>
+                <COLOR  fn="ConstantTop" sn="Constant Color (top)" va="17" pv="&dataCol;" tip="Color of top when Color Function is Constant"/>
+                <LINT   fn="Line Width" va="1" pv="1:5"/>
+                <SCOLOR fn="Frame" va="14" pv="&frameCol;" st="ON" tip="Frame Color" ul="&superuser;"/>
+                <LINT   fn="Frame Width" va="1" pv="1:5" ul="&superuser;"/>
+            </Group>
+                    
+        </SuperGroup>
+
+        <SuperGroup name="Geometry" toolTip="ATLAS Geometry settings (colors, etc)">
+
+            <Group name="Det" sname="Geo" guiUsage="TABLE" toolTip="Colors of detectors geometry">
+                <SCOLOR fn="PIX Fill" sn="Pixel color" va="1" st="ON" pv="&detectCol;" tip="Pixel fill color" ul="&user;"/>
+                <SCOLOR fn="SIL Fill" sn="SCT color" va="1" st="ON" pv="&detectCol;" tip="Semiconducting Tracker fill color" ul="&user;"/>
+                <SCOLOR fn="TRT Fill" sn="TRT color" va="1" st="ON" pv="&detectCol;" tip="Transition Radiation Tracker fill color"/>
+                <SCOLOR fn="Sol Fill" sn="Solenoid color" va="1" st="ON" pv="&detectCol;" tip="Solenoid fill color"/>
+                <SCOLOR fn="ECAL Fill" sn="LAr calorimeter color" va="5" st="ON" pv="&detectCol;" tip="Electromagmetic calorimeter (LAr) fill color"/>
+                <SCOLOR fn="HCAL Fill" sn="Tile calorimeter color" va="3" st="ON" pv="&detectCol;" tip="Hadronic calorimeter (Tile) fill color"/>
+                <SCOLOR fn="RPC Fill" sn="RPC color" va="4" st="ON" pv="&detectCol;" tip="Resistive Plate Chamber fill color" ul="&user;"/>
+                <SCOLOR fn="TGC Fill" sn="TGC color" va="4" st="ON" pv="&detectCol;" tip="Thin Gap Chambers fill color" ul="&user;"/>
+                <SCOLOR fn="MDT Fill" sn="MDT color" va="6" st="ON" pv="&detectCol;" tip="Monitored Drift Tube chambers fill color" ul="&user;"/>
+                <SCOLOR fn="CSC Fill" sn="CSC color" va="6" st="ON" pv="&detectCol;" tip="Cathod Strip Chambers fill color" ul="&user;"/>
+                <COLOR sn="Background color" scope="" ul="0" pv="0:8,14,26" va="26" fn="Bkg Fill" tip="Background fill color"/>
+                <FLOAT sn="Alpha for Jet Transparent Cones" fn="Alpha" scope="" ul="0" pv="0.0:1.0" va="0.35" tip="Alpha of transparent objects"/>
+                <FLOAT sn="Alpha for Jet Transparent Towers" fn="AlphaJets" scope="" ul="0" pv="0.0:1.0" va="0.15" tip="Alpha Jet Towers"/>              
+                <SCOLOR fn="Silicon Detail" sn="Pixel/SCT geometry detail" va="14" st="OFF" pv="&detectCol;" tip="Pixel/SCT detailed geometry structure"/>
+                <SCOLOR fn="TRT Detail" sn="TRT geometry detail" va="14" st="OFF" pv="&detectCol;" tip="TRT detailed geometry structure"/>
+                <SCOLOR fn="Calo Detail" sn="Calorimetry cell structure" va="14" st="OFF" pv="&detectCol;" tip="Detailed structure of calorimeter cells"/>
+                <STATUS fn="Detectors" sn="Show detectors" st="ON" ul="&user;"/>
+                <STATUS fn="Hide Detectors" sn="Show detectors outline" st="OFF" tip="Hide the detectors colour but leave their outline"/>
+            </Group>
+
+        </SuperGroup>
+
+        <!-- The internal group must be the last group -->
+        <SuperGroup name="Internal" toolTip="Internal" userLevel="&superuser;">
+                
+            <Group name="HitColors" toolTip="Color Priority by Hue Difference">
+                <INT    fn="Number"  va="7"  tip="Number of Colors used"/>
+                <COLOR  fn="C1"  va="20"  tip="color 1"/>
+                <COLOR  fn="C2"  va="21"  tip="color 2"/>
+                <COLOR  fn="C3"  va="28"  tip="color 3"/>
+                <COLOR  fn="C4"  va="27"  tip="color 4"/>
+                <COLOR  fn="C5"  va="25"  tip="color 5"/>
+                <COLOR  fn="C6"  va="24"  tip="color 6"/>
+                <COLOR  fn="C7"  va="23"  tip="color 7"/>
+            </Group>
+
+            <Group name="ParticleColors" toolTip="Color Priority by Hue Difference">
+                <INT    fn="Number" va="7" tip="Number of Colors used"/>
+                <COLOR  fn="C1" va="28" tip="color 1"/>
+                <COLOR  fn="C2" va="25" tip="color 2"/>
+                <COLOR  fn="C3" va="23" tip="color 3"/>
+                <COLOR  fn="C4" va="21" tip="color 4"/>
+                <COLOR  fn="C5" va="24" tip="color 5"/>
+                <COLOR  fn="C6" va="20" tip="color 6"/>
+                <COLOR  fn="C7" va="27" tip="color 7"/>
+            </Group>
+
+            <Group name="Event" scope="GLOBAL" toolTip="Event">
+                <STATUS fn="Restore Defaults" st="OFF" tip="Restore defaults each event" ul="&user;"/>
+                <ENUM   fn="Picking Mode" va="0" pv="&pickingModes;" ul="&debug;"/>
+                <FLOAT  fn="XVtx" va="0.0" tip="X of Primary Vertex" u="&length;"/>
+                <FLOAT  fn="YVtx" va="0.0" tip="Y of Primary Vertex" u="&length;"/>
+                <FLOAT  fn="ZVtx" va="0.0" tip="Z of Primary Vertex" u="&length;"/>
+                <FLOAT  fn="Curvature" va="166.6666667" tip="Magnetic field parameter"/>
+            </Group>
+                    
+            <Group name="Prefs" toolTip="Preferences menu items">
+                <STATUS fn="CanvasTitle" st="ON" tip="Display Canvas title" ul="&user;"/>
+                <STATUS fn="WindowTitle" st="OFF" tip="Display Window titles" ul="&user;"/>
+                <STATUS fn="HideScales" st="OFF" tip="Hide all scales" ul="&user;"/>
+                <STATUS fn="FisheyeIndicator" st="ON" tip="Display Fisheye indicator" ul="&user;"/>
+                <STATUS fn="AtlasLogo" st="OFF" tip="Show ATLAS logo on saved images" ul="&user;"/>
+                <STATUS fn="AntiAlias" st="ON" tip="Turn on/off antialiasing" ul="&user;"/>
+                <STATUS fn="OpenGL" st="OFF" tip="Turn on/off openGL displays" ul="&superuser;"/>
+                <INT    fn="ColorMap" va="0" tip="startup colorMap"/>
+            </Group>
+
+            <!--special section for masterclass that cannot be set on the GUI-->            
+            <!--the run number gives away the event type so it is hidden by these opions-->
+            <Group name="Minerva" toolTip="Minerva options">
+                <STATUS fn="hide run" st="OFF"/>
+                <STATUS fn="hide ev" st="OFF"/>
+                <STATUS fn="hide geometry" st="OFF"/>
+                <STATUS fn="simple output" st="OFF"/>
+                <STATUS fn="alternative simple output" st="OFF"/>
+                <STATUS fn="hide V0 mass output" st="OFF"/>
+            </Group>
+
+        </SuperGroup>
+
+    </Parameters>
+    <ParameterDifferences>
+        <DIFFERENCE group="YX" name="FishEye" st="OFF" windowName="L"/>
+        <DIFFERENCE group="YX" name="FishEye" st="OFF" windowName="M"/>
+        <DIFFERENCE group="YX" name="FishEye" st="OFF" windowName="R"/>
+        <DIFFERENCE group="RZ" name="FishEye" st="ON" va="0.8" windowName="B"/>
+        <DIFFERENCE group="LegoPlot" name="L1Items" st="ON"/>
+        <DIFFERENCE group="LegoPlot" name="L2Items" st="ON"/>
+        <DIFFERENCE group="LegoPlot" name="EFItems" st="ON"/>
+        <DIFFERENCE group="Data" name="MuonSegment" st="ON"/>
+        <DIFFERENCE group="Data" name="Jet" st="OFF"/>
+        <DIFFERENCE group="Data" name="ETMis" st="OFF"/>
+        <DIFFERENCE group="Data" name="BJet" st="OFF"/>
+        <DIFFERENCE group="Data" name="Electron" st="OFF"/>
+        <DIFFERENCE group="Data" name="Muon" st="OFF"/>
+        <DIFFERENCE group="Data" name="Photon" st="OFF"/>
+        <DIFFERENCE group="Data" name="TauJet" st="OFF"/>
+        <DIFFERENCE group="Data" name="Cluster" op="" st="ON" va="" windowName="D"/>
+        <DIFFERENCE group="Data" name="Jet" op="" st="ON" va="" windowName="D"/>
+        <DIFFERENCE group="Data" name="ETMis" op="" st="ON" va="" windowName="L"/>
+        <DIFFERENCE group="Data" name="ETMis" op="" st="ON" va="" windowName="D"/>
+        <DIFFERENCE group="Data" name="TRT" st="ON" windowName="M"/>
+        <DIFFERENCE group="Data" name="TRT" st="ON" windowName="R"/>
+        <DIFFERENCE group="Data" name="S3D" st="ON" windowName="R"/>
+        <DIFFERENCE group="CutsInDet" name="Pt" st="OFF"/>
+        <DIFFERENCE group="CutsInDet" name="d0" st="OFF"/>
+        <DIFFERENCE group="CutsInDet" name="z0" st="OFF"/>
+        <DIFFERENCE group="CutsInDet" name="d0Loose" st="OFF"/>
+        <DIFFERENCE group="CutsInDet" name="Noise" st="ON"/>
+        <DIFFERENCE group="CutsInDet" name="TRTTimeOverThreshold" st="ON" va="10.0"/>
+        <DIFFERENCE group="CutsInDet" name="SCT" va="1.0" windowName="R"/>
+        <DIFFERENCE group="InDetTrack" name="ColorFunction" va="1"/>
+        <DIFFERENCE group="S3D" name="ColorFunction" va="2"/>    
+        <DIFFERENCE group="S3D" name="SymbolSize" va="2"/>
+        <DIFFERENCE group="S3D" name="NoiseSize" va="1"/>
+        <DIFFERENCE group="TRT" name="ColorFunction" va="2"/>
+        <DIFFERENCE group="TRT" name="SymbolSize" va="1"/>
+        <DIFFERENCE group="TRT" name="ForceSymbols" st="ON"/>
+        <DIFFERENCE group="InDetDrawingOrder" name="SpacePointsTracks" va="1"/>
+        <DIFFERENCE group="MuonTrack" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="MuonTrack" name="Constant" va="28"/>
+        <DIFFERENCE group="MuonSegment" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="MuonSegment" name="Constant" va="21"/>
+        <DIFFERENCE group="MDT" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="MDT" name="Constant" va="23"/>
+        <DIFFERENCE group="CSC" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="CSC" name="Constant" va="23"/>
+        <DIFFERENCE group="CSC" name="Strip" va="23"/>
+        <DIFFERENCE group="RPC" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="RPC" name="Constant" va="20"/>
+        <DIFFERENCE group="TGC" name="ColorFunction" va="0"/>
+        <DIFFERENCE group="TGC" name="Constant" va="20"/>
+        <DIFFERENCE group="Det" name="SiliconDetail" st="ON" va="2"/>
+        <DIFFERENCE group="Det" name="TRTDetail" st="ON" va="2"/>
+        <DIFFERENCE group="Prefs" name="WindowTitle" st="ON"/>
+        <DIFFERENCE group="Prefs" name="FisheyeIndicator" st="OFF"/>
+        <DIFFERENCE group="Det" name="SiliconDetail" st="ON"/>
+        <DIFFERENCE group="Det" name="TRTDetail" st="ON"/>
+        <DIFFERENCE group="Det" name="CaloDetail" st="ON"/>
+    </ParameterDifferences>
+    <WindowCorners>
+        <CORNERS windowName="W" x0="-1320.0" x1="1320.0" x2="1320.0" y0="1320.0" y1="1320.0" y2="-1320.0"/>
+        <CORNERS windowName="S" x0="-1320.0" x1="1320.0" x2="1320.0" y0="1320.0" y1="1320.0" y2="-1320.0"/>
+        <CORNERS windowName="R" x0="-142.49504576158947" x1="142.49504576158947" x2="142.49504576158947" y0="194.06974516037374" y1="194.06974516037374" y2="-194.06974516037374"/>
+        <CORNERS windowName="M" x0="-520.5889580270939" x1="520.5889580270939" x2="520.5889580270939" y0="709.0110808951092" y1="709.0110808951092" y2="-709.0110808951092"/>
+        <CORNERS windowName="L" x0="-1195.0817807212181" x1="1195.0817807212181" x2="1195.0817807212181" y0="1627.6300371762861" y1="1627.6300371762861" y2="-1627.6300371762861"/>
+        <CORNERS windowName="D" x0="-241.0" x1="385.0" x2="385.0" y0="-30.0" y1="-30.0" y2="8.0"/>
+        <CORNERS windowName="B" x0="-2648.3771262641935" x1="2648.3771262641935" x2="2648.3771262641935" y0="1484.0532796770292" y1="1484.0532796770292" y2="-1484.0532796770292"/>
+    </WindowCorners>
+</AtlantisConfiguration>
