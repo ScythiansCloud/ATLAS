@@ -751,18 +751,30 @@ def sort_leptons_by_pt(akw_array):
     # sorting them by lep_pt in descending order
     sorted_pt=ak.argsort(-akw_array.lep_pt)
     if(ak.count_nonzero(sorted_pt)>0): # Ignore if no entry to change
-        akw_array.lep_pt=akw_array.lep_pt[sorted_pt]
-        akw_array.lep_eta=akw_array.lep_eta[sorted_pt]
-        akw_array.lep_phi=akw_array.lep_phi[sorted_pt]
-        akw_array.lep_E=akw_array.lep_E[sorted_pt]
-        akw_array.lep_ptiso=akw_array.lep_ptiso[sorted_pt]
-        akw_array.lep_etiso=akw_array.lep_etiso[sorted_pt]
-        akw_array.lep_charge=akw_array.lep_charge[sorted_pt]
-        akw_array.lep_id=akw_array.lep_id[sorted_pt]
-        akw_array.lep_d0=akw_array.lep_d0[sorted_pt]
-        akw_array.lep_d0sig=akw_array.lep_d0sig[sorted_pt]
-        akw_array.lep_z0=akw_array.lep_z0[sorted_pt]
-        akw_array.lep_z0sig=akw_array.lep_z0sig[sorted_pt]
+        # akw_array.lep_pt=akw_array.lep_pt[sorted_pt]
+        # akw_array.lep_eta=akw_array.lep_eta[sorted_pt]
+        # akw_array.lep_phi=akw_array.lep_phi[sorted_pt]
+        # akw_array.lep_E=akw_array.lep_E[sorted_pt]
+        # akw_array.lep_ptiso=akw_array.lep_ptiso[sorted_pt]
+        # akw_array.lep_etiso=akw_array.lep_etiso[sorted_pt]
+        # akw_array.lep_charge=akw_array.lep_charge[sorted_pt]
+        # akw_array.lep_id=akw_array.lep_id[sorted_pt]
+        # akw_array.lep_d0=akw_array.lep_d0[sorted_pt]
+        # akw_array.lep_d0sig=akw_array.lep_d0sig[sorted_pt]
+        # akw_array.lep_z0=akw_array.lep_z0[sorted_pt]
+        # akw_array.lep_z0sig=akw_array.lep_z0sig[sorted_pt]
+        akw_array["lep_pt"]=akw_array.lep_pt[sorted_pt]
+        akw_array["lep_eta"]=akw_array.lep_eta[sorted_pt]
+        akw_array["lep_phi"]=akw_array.lep_phi[sorted_pt]
+        akw_array["lep_E"]=akw_array.lep_E[sorted_pt]
+        akw_array["lep_ptiso"]=akw_array.lep_ptiso[sorted_pt]
+        akw_array["lep_etiso"]=akw_array.lep_etiso[sorted_pt]
+        akw_array["lep_charge"]=akw_array.lep_charge[sorted_pt]
+        akw_array["lep_id"]=akw_array.lep_id[sorted_pt]
+        akw_array["lep_d0"]=akw_array.lep_d0[sorted_pt]
+        akw_array["lep_d0sig"]=akw_array.lep_d0sig[sorted_pt]
+        akw_array["lep_z0"]=akw_array.lep_z0[sorted_pt]
+        akw_array["lep_z0sig"]=akw_array.lep_z0sig[sorted_pt]
     return akw_array
 
 def sort_jets_by_pt(akw_array):
@@ -771,9 +783,9 @@ def sort_jets_by_pt(akw_array):
     # Function accepts akward array with fields 'jet_pt', 'jet_eta' and 'jet_phi' sorting them by jet_pt in descending order
     sorted_pt=ak.argsort(-akw_array.jet_pt)
     if(ak.count_nonzero(sorted_pt)>0): # Ignore if no entry to change
-        akw_array.jet_pt=akw_array.jet_pt[sorted_pt]
-        akw_array.jet_eta=akw_array.jet_eta[sorted_pt]
-        akw_array.jet_phi=akw_array.jet_phi[sorted_pt]
+        akw_array["jet_pt"]=akw_array.jet_pt[sorted_pt]
+        akw_array["jet_eta"]=akw_array.jet_eta[sorted_pt]
+        akw_array["jet_phi"]=akw_array.jet_phi[sorted_pt]
     return akw_array
 
 def preselection_cuts(akw):
